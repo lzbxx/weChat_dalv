@@ -1,3 +1,30 @@
-<view>
+<view class="heder">
+
+  <image class="mohu" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495548208843&di=7bbbca3b0553d0b0d981602b133f5ad1&imgtype=0&src=http%3A%2F%2Fi4.cqnews.net%2Fqx%2Fhtml%2Fattachement%2Fjpg%2Fsite82%2F20160303%2F74e50b8a2faf18422da556.jpg" />  
+  <view class="search">
+    <image src="../../images/geographical_position@2x.png" style="" />
+    <input type="" placeholder="sss" auto-focus text  />
+    <image src="../../images/search@2x.png" />
+  </view>
+
+  <view class="message">
+
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg" />
+    <view class="name" >
+      <view>
+      林秋月
+      <text>顾问</text>
+      </view>
+
+       <view>
+        积分：<text>52555</text>分
+      </view>
+  
     
+    </view>
+  </view>
+
+
+
+
 </view>

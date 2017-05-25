@@ -1,30 +1,135 @@
 <view class="heder">
 
-  <image class="mohu" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495548208843&di=7bbbca3b0553d0b0d981602b133f5ad1&imgtype=0&src=http%3A%2F%2Fi4.cqnews.net%2Fqx%2Fhtml%2Fattachement%2Fjpg%2Fsite82%2F20160303%2F74e50b8a2faf18422da556.jpg" />  
+  <image class="mohu" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495548208843&di=7bbbca3b0553d0b0d981602b133f5ad1&imgtype=0&src=http%3A%2F%2Fi4.cqnews.net%2Fqx%2Fhtml%2Fattachement%2Fjpg%2Fsite82%2F20160303%2F74e50b8a2faf18422da556.jpg"
+  />
   <view class="search">
-    <image src="../../images/geographical_position@2x.png" style="" />
-    <input type="" placeholder="sss" auto-focus text  />
+    <image src="../../images/geographical_position@2x.png" />
+    <input placeholder="搜索旅游线路、签证、代码" placeholder-class="psection" />
     <image src="../../images/search@2x.png" />
   </view>
 
   <view class="message">
 
-    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg" />
-    <view class="name" >
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg"
+    />
+    <view class="name">
       <view>
-      林秋月
-      <text>顾问</text>
+        林秋月
+        <text>顾问</text>
       </view>
 
-       <view>
-        积分：<text>52555</text>分
+      <view>
+        积分:
+        <text>52555</text>分
       </view>
-  
-    
+
+
     </view>
   </view>
 
 
+
+
+</view>
+
+<view class="nav">
+
+  <view class="nav_list">
+    <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
+    <view>
+      出境游
+    </view>
+  </view>
+  <view class="nav_list">
+    <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
+    <view>
+      出境游
+    </view>
+  </view>
+  <view class="nav_list">
+    <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
+    <view>
+      出境游
+    </view>
+  </view>
+  <view class="nav_list">
+    <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
+    <view>
+      出境游
+    </view>
+  </view>
+  <view class="nav_list">
+    <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
+    <view>
+      出境游
+    </view>
+  </view>
+  <view class="nav_list">
+    <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
+    <view>
+      出境游
+    </view>
+  </view>
+
+
+</view>
+
+<view class="list">
+  <view style="text-align: center;height:60rpx;line-height:60rpx">
+    ——— 精选路线 ———
+  </view>
+
+  <view class="line_list">
+    <view class="list_item">
+      <image src="http://img4.imgtn.bdimg.com/it/u=1761613656,1090421656&fm=23&gp=0.jpg" />
+      <view>
+        几次哦十几次售出数京城四少村上春树将此事词汇书守护神收到货搜地
+      </view>
+      <view class="price_destination">
+        <view>北京出发</view>
+        <view>￥400</view>
+      </view>
+
+    </view>
+
+    <view class="list_item">
+      <image src="http://img4.imgtn.bdimg.com/it/u=1761613656,1090421656&fm=23&gp=0.jpg" />
+      <view>
+        几次哦十几次售出数京城四少村上春树将此事词汇书守护神收到货搜地
+      </view>
+      <view class="price_destination">
+        <view>北京出发</view>
+        <view>￥400</view>
+      </view>
+
+    </view>
+    <view class="list_item">
+      <image src="http://img4.imgtn.bdimg.com/it/u=1761613656,1090421656&fm=23&gp=0.jpg" />
+      <view>
+        几次哦十几次售出数京城四少村上春树将此事词汇书守护神收到货搜地
+      </view>
+      <view class="price_destination">
+        <view>北京出发</view>
+        <view>￥4000</view>
+      </view>
+
+    </view>
+    <view class="list_item">
+      <image src="http://img4.imgtn.bdimg.com/it/u=1761613656,1090421656&fm=23&gp=0.jpg" />
+      <view>
+        几次哦十几次售出数京城四少村上春树将此事词汇书守护神收到货搜地
+      </view>
+      <view class="price_destination">
+        <view>北京出发</view>
+        <view>￥400</view>
+      </view>
+
+    </view>
+
+
+
+
+  </view>
 
 
 </view>

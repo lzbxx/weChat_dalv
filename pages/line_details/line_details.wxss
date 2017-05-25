@@ -1,0 +1,246 @@
+
+
+page{
+    background: #F3F3F3;
+}
+.banner{
+    background: white;
+}
+swiper{
+    height: 400rpx;
+}
+swiper image{
+  height: 400rpx;
+  width: 100%;
+}
+.line_title{
+    display: flex;
+    height: 100rpx;
+    margin-top: 10rpx;
+    box-sizing: border-box;
+    padding: 0px 20rpx;
+}
+.line_title view:nth-of-type(1){
+    width: 80%;
+    font-size: 30rpx;
+    line-height: 50rpx;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.line_title view:nth-of-type(2){
+    text-align: center;
+    width: 20%;
+}
+.line_title view:nth-of-type(2) image{
+    margin-top: 10rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+.code{
+    display: flex;
+    font-size: 25rpx;
+    color:#9F9F9F;
+    margin-top: 30rpx;
+    box-sizing: border-box;
+    padding: 0px 20rpx;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.code view{
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 20rpx;
+}
+.price{
+    display: flex;
+    box-sizing: border-box;
+    height: 80rpx;
+    padding: 0px 30rpx;
+    align-items: center;
+   
+    
+}
+.price view{
+    flex: 1;
+    color:#FE603B;
+}
+.schedule{
+    display: flex;
+    /*box-sizing: border-box;*/
+    padding: 10rpx 30rpx;
+    align-items: center;
+    margin-top: 10rpx;
+    background: white;
+    
+}
+.schedule view{
+    flex: 1;
+    background: white;
+    font-size: 30rpx;
+    color: rgba(0, 0, 0,0.7)
+}
+.line_message{
+    display: flex;
+    /*box-sizing: border-box;*/
+    padding: 0rpx 30rpx;
+    background: white;
+    margin-top: 10rpx;
+    flex-wrap: wrap;
+
+
+}
+.line_message > view{
+    width: 50%;
+    display: flex;
+    align-self: center;
+    font-size: 24rpx;
+    color: #ACACAC;
+    line-height: 50rpx;
+    padding: 10rpx 0px;
+    overflow: hidden;
+}
+.line_message > view  image{
+    margin-right: 10rpx;
+    
+}
+.tap{
+    margin-top: 10rpx ;
+    background: white;
+    
+}
+ .my-swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #E8E8E8;  
+    text-align: center;  
+    line-height: 80rpx;}  
+ .my-swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+}  
+ .my-on{ color: #6D82F3;  
+    border-bottom: 5rpx solid #6D82F3;}  
+  
+ .my-wiper-box{ display: block; height: 100%; width: 100%; overflow: scroll; }  
+
+.router{
+    box-sizing: border-box;
+    padding:0rpx  30rpx 30rpx 30rpx;
+    text-align: left;
+}
+.router .day{
+  border: 1px  #6D82F3 solid;
+  text-align: center;
+  display:inline-block;
+  color: #6D82F3;
+  font-size: 22rpx;
+  padding: 10rpx ;
+  border-radius: 50% 0;
+  margin-top: 36rpx;
+}
+.router .router_message{
+    font-size: 24rpx;
+    padding: 5rpx;
+    margin-top: 28rpx;
+}
+.router .have_dinner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 22rpx;
+
+}
+.router .have_dinner view{
+    width: 45%;
+    border: 1rpx solid #E6E6E6;
+    font-size: 26rpx;
+    height:  60rpx;
+    line-height: 60rpx;
+    color: #E6E6E6;
+    padding-left: 18rpx;
+}
+.router .have_dinner view image{
+    height:40rpx;width:40rpx;vertical-align: middle;
+}
+.router .have_dinner view text:nth-of-type(2){
+    float: right;
+    color: blueviolet;
+    margin-right: 10rpx;
+}
+.brightened_dot{
+    display: flex;
+    margin-top: 44rpx;
+    font-size: 30rpx;
+    word-spacing: 2rpx;
+    line-height: 32rpx;
+    color: #3F3F3F;
+}
+.brightened_dot image{
+    height: 40rpx;
+    width: 40rpx;
+}
+.my-swiper-item{
+    overflow: auto;
+}
+
+.contact-way{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   	font-size:26rpx ;
+   	font-weight: 900;
+   	height: 90rpx;
+   	line-height: 90rpx;
+   	background: white;
+   	position: fixed;
+   	bottom:0;
+   	width: 100%;
+}
+
+
+.contact-way view{
+	flex: 1;
+	
+	
+}
+.contact-way .phone{
+	color: black;
+	background:#B9FA7C ;
+}
+.contact-way .phone image{
+	height: 40rpx;
+	width: 40rpx;
+	vertical-align: middle;
+}
+.contact-way .book{
+	background:#FE6642 ;
+	color: white;
+	
+	
+	
+}
+.recommended{
+	position: absolute;
+	bottom: 60rpx;
+	right: 30rpx;
+	background: #FE6643;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	color: white;
+	vertical-align: middle;
+	width: 200rpx;
+	bottom: 120rpx;
+	border-radius: 15%/50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.recommended image{
+	height: 40rpx;
+	width: 40rpx;
+	
+}
+

@@ -1,0 +1,196 @@
+<view class="banner">
+
+	<swiper indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="{{duration}}">
+		<block>
+			<swiper-item>
+				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
+			</swiper-item>
+			<swiper-item>
+				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
+			</swiper-item>
+			<swiper-item>
+				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<view class="line_title">
+		<view>
+			世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放
+		</view>
+		<view>
+			<image src="../../images/edit@2x.png" />
+			<view style="text-algin:center;width:100%;font-size:26rpx;color:#FE603B">
+				编辑
+			</view>
+		</view>
+
+	</view>
+
+	<view class="code">
+		<view style="text-align:left">代码：542685</view>
+		<view>供应商：金旅假期</view>
+		<view style="text-align:right">联系人：不不不</view>
+	</view>
+	<view class="price">
+		<view style="color:#FE603B">￥<text>1699.0</text></view>
+		<view style="text-align:right">
+
+			<view style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>
+
+		</view>
+	</view>
+
+</view>
+<view class="schedule">
+
+	<image src="../../images/group_date_select@2x.png" style="height:60rpx;width:60rpx;align-self:flex-end" />
+	<view>出团日期</view>
+	<view>
+		<image src="../../images/arrowhead_left@2x.png" style="height:50rpx;width:50rpx;float:right; " />
+	</view>
+
+</view>
+
+<view class="line_message">
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text style="color:#272822">北京</text>
+	</view>
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text>北京</text>
+	</view>
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text>北京</text>
+	</view>
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text>北京</text>
+	</view>
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text>北京</text>
+	</view>
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text>北京</text>
+	</view>
+	<view style="width:50%">
+		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+		<text>北京</text>
+	</view>
+</view>
+<view class="tap">
+	<view class="my-swiper-tab" style="display:flex">
+		<view class="my-swiper-tab-list {{currentTab==0 ? 'my-on' : ''}}" data-current="0" bindtap="swichNav">行程安排</view>
+		<view class="my-swiper-tab-list {{currentTab==1 ? 'my-on' : ''}}" data-current="1" bindtap="swichNav">产品亮点</view>
+		<view class="my-swiper-tab-list {{currentTab==2 ? 'my-on' : ''}}" data-current="2" bindtap="swichNav">费用说明</view>
+		<view class="my-swiper-tab-list {{currentTab==3 ? 'my-on' : ''}}" data-current="3" bindtap="swichNav">注意事项</view>
+
+	</view>
+
+	<swiper current="{{currentTab}}" class="my-swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+		<!-- 我是哈哈 -->
+		<swiper-item class="my-swiper-item">
+			<view class="router">
+				<text class="day">第一天</text>
+				<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+				<view class="have_dinner">
+					<view>
+						<image src="../../images/have_dinner@2x.png" style="" />
+						<text>用餐</text>
+						<text>自理</text>
+					</view>
+					<view>
+						<image src="../../images/hotel@2x.png" style="height:40rpx;width:40rpx;" />
+						<text>自理</text>
+						<text>无</text>
+					</view>
+
+				</view>
+			</view>
+
+			<view class="router">
+				<text class="day">第一天</text>
+				<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+				<view class="have_dinner">
+					<view>
+						<image src="../../images/have_dinner@2x.png" style="" />
+						<text>用餐</text>
+						<text>自理</text>
+					</view>
+					<view>
+						<image src="../../images/hotel@2x.png" style="height:40rpx;width:40rpx;" />
+						<text>自理</text>
+						<text>无</text>
+					</view>
+
+				</view>
+			</view>
+
+		</swiper-item>
+
+		<swiper-item>
+			<view style="box-sizing: border-box;padding: 0px 30rpx">
+				<veiw class="brightened_dot">
+					<view>
+						<image src="../../images/brightened_dot@2x.png" />
+					</view>
+					<view style="padding-left:10rpx;">问佛万将诶欧服亿欧元地方大富豪 就当减肥多或东 do佛的回复第佛号的的较丰厚的发货单发货的解放后ID合法地发挥度覅殴打后覅偶电话费封ID佛is发挥地方度覅of合适的话</view>
+				</veiw>
+
+				<veiw class="brightened_dot">
+					<view>
+						<image src="../../images/brightened_dot@2x.png" />
+					</view>
+					<view style="padding-left:10rpx;">问佛万将诶欧服亿欧元地方大富豪 就当减肥多或东 do佛的回复第佛号的的较丰厚的发货单发货的解放后ID合法地发挥度覅殴打后覅偶电话费封ID佛is发挥地方度覅of合适的话</view>
+				</veiw>
+
+			</view>
+		</swiper-item>
+
+		<swiper-item>
+			<view>
+				<view class="router">
+					<text class="day">费用包含</text>
+					<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+
+				</view>
+				<view class="router">
+					<text class="day" style="color:#FF4F26;border-color:#FF4F26">费用不包含</text>
+					<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+
+				</view>
+
+			</view>
+		</swiper-item>
+
+		<swiper-item>
+			<view class="router" style="font-size:30rpx;margin-top:40rpx">
+				健康的水平等级SOP绝对是判断 大家搜迫击炮倒计时 都是【id【斯达舒【的【id【死的【死的四道【is【我odufweiojfpdufopdj
+			</view>
+		</swiper-item>
+
+	</swiper>
+</view>
+
+<view class="contact-way">
+	<view class="phone"><image src="../../images/phone@2x.png"/>电话咨询</view>
+	<view class="book">
+		立即预订
+	</view>
+	
+	
+	<view class="recommended">
+		<image src="../../images/recommended_home@2x.png"/>
+		推到首页
+	</view>
+	
+
+	
+
+</view>
+
+	

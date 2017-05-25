@@ -1,7 +1,11 @@
 page{
-    font-family: "楷体"
+    font-family: "楷体";
+    background:#F1F1F1；
+   
 }
-
+.psection{
+    color: #fff;
+}
 
 .heder{
     height: 150px;
@@ -10,18 +14,21 @@ page{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
+
 .heder .mohu{
     position: absolute;
     filter: blur(1px);
     height: 100%;
     width: 100%;
-    z-index: -1
+    z-index: -1;
+    left: 0px;
 }
 .heder .search{
    display: flex;
    height: 30px;
-   width: 70%;
+   width: 74%;
    background: rgba(255, 255, 255,.3);
    color: white;
    border-radius: 5px;
@@ -45,7 +52,8 @@ page{
 
 .heder .search input{
     height: 25px;
-    padding-left: 10px
+    padding-left: 10px;
+    width:90%;
 }
 .heder .message{
     display: flex;
@@ -64,7 +72,6 @@ page{
 .heder .message .name{
     color: white;
     font-size: 18px;
-    
 }
 .heder .message .name view:nth-of-type(1){
     background: rgba(0, 0, 0,.5);
@@ -84,4 +91,68 @@ page{
     margin: 5px;
     border-radius: 5px;
     font-size: 12px;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    background: white;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.nav .nav_list{
+    text-align: center;
+    width: 25%;
+    font-size: 14px;
+    padding: 5px 2px;
+    box-sizing: border-box;
+    
+}
+.nav .nav_list image{
+    width: 100rpx;
+    height:100rpx;
+}
+.list{
+    background: white;
+    margin-top: 5px
+
+}
+.list .line_list {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10rpx 40rpx;
+    flex-wrap: wrap;
+}
+.list .line_list .list_item{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10rpx;
+}
+.list .line_list  .list_item image{
+    height: 200rpx;
+    width: 100%;
+}
+.list .line_list .list_item view:nth-of-type(1){
+    font-size: 28rpx;
+    height: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    /*white-space: nowrap;强制不换行*/
+}
+
+.list .line_list .list_item .price_destination{
+    margin-top: 5px;
+    height: 32rpx;
+    font-size: 28rpx;
+    display: flex;
+
+}
+.list .line_list .list_item .price_destination view:nth-of-type(1){
+    color: #6E81F0;
+    width: 78%;
+    align-items: center;
+}
+.list .line_list .list_item .price_destination view:nth-of-type(2){
+    color: orange;
+    
 }

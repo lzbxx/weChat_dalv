@@ -1,2 +1,33 @@
-<!--pages/template/template.wxml-->
-<text>pages/template/template.wxml</text>
+<view class="my-swiper-tab" style="display:flex">  
+    <view class="my-swiper-tab-list {{currentTab==0 ? 'my-on' : ''}}" data-current="0" bindtap="swichNav">行程安排</view>  
+    <view class="my-swiper-tab-list {{currentTab==1 ? 'my-on' : ''}}" data-current="1" bindtap="swichNav">产品亮点</view>  
+    <view class="my-swiper-tab-list {{currentTab==2 ? 'my-on' : ''}}" data-current="2" bindtap="swichNav">费用说明</view>
+    <view class="my-swiper-tab-list {{currentTab==3 ? 'my-on' : ''}}" data-current="3" bindtap="swichNav">注意事项</view>
+  
+</view>  
+  
+<swiper current="{{currentTab}}" class="my-swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 我是哈哈 -->  
+    <swiper-item>  
+      <view>
+
+      <p>含京津往返大巴<br/></p><p>自费推荐不强迫</p><p>天津直飞 拒绝转机</p>
+      
+      
+      </view>  
+    </swiper-item>  
+    <!-- 我是呵呵 -->  
+    <swiper-item>  
+      <view>2</view>  
+    </swiper-item>  
+    <!-- 我是嘿嘿 -->  
+    <swiper-item>  
+      <view>3</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>4</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>5</view>  
+    </swiper-item>  
+</swiper>  

@@ -88,7 +88,7 @@
 	        </view>
 	        <view style="width: 25%;">手机号：</view>
 	        <view class="quantity" style="padding-left: 10rpx;vertical-align: middle;width: 70%;text-align: left;justify-content: flex-start;align-items: center;">
-	            <input  placeholder="填写常用联系人"  number />
+	            <input  placeholder="填写常用联系人"  maxlength="11" type="number" />
 	        </view>
 	        
 	        <view style="width: 25%;">订单备注：</view>

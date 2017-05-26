@@ -1,4 +1,4 @@
-// pages/index/home.js
+// pages/line_atlas/line_atlas.js
 Page({
 
   /**
@@ -20,10 +20,6 @@ Page({
    */
   onReady: function () {
   
-  },
-  skip:function(){
-    
-
   },
 
   /**

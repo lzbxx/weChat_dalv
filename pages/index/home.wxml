@@ -34,7 +34,7 @@
 
 <view class="nav">
 
-  <view class="nav_list">
+  <view class="nav_list" bindlongtap="skip">
     <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
     <view>
       出境游

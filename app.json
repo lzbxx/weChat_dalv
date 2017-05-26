@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/index/home",
+    "pages/line_atlas/line_atlas",
     "pages/submit/submit",
     "pages/line_details/line_details",
-    "pages/index/home",
     "pages/order/order",
     "pages/financial/financial",
     "pages/my/my",
-    "pages/template/template",
     "pages/change_price/change_price"
   ],
   "window": {

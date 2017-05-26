@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/modal/modal",
     "pages/index/home",
     "pages/line_atlas/line_atlas",
     "pages/submit/submit",
@@ -8,6 +9,8 @@
     "pages/financial/financial",
     "pages/my/my",
     "pages/change_price/change_price"
+    
+
   ],
   "window": {
     "backgroundTextStyle": "light",

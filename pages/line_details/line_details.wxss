@@ -242,5 +242,6 @@ swiper image{
 .recommended image{
 	height: 40rpx;
 	width: 40rpx;
+
 }
 

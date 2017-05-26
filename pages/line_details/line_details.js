@@ -9,6 +9,22 @@ Page({
     // tab切换  
     currentTab: 0,
   },
+  change_money:function(){
+     wx.navigateTo({
+      url: '../../pages/change_price/change_price'
+    })
+
+  },
+  book:function(){
+    wx.navigateTo({
+      url: '../../pages/submit/submit'
+    })
+  },
+  to_atlas:function(){
+    wx.navigateTo({
+      url: '../../pages/line_atlas/line_atlas'
+    })
+  },
   onLoad: function () {
     var that = this;
 

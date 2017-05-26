@@ -39,19 +39,19 @@
       <text>￥1288/￥1588</text>
     </view>
     <view>
-      <input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/>
+      <input placeholder-class="psect" type="number" placeholder="请输入修改后的价格"  />
     </view>
     <view>儿童价：
       <text>￥1288/￥1588</text>
     </view>
     <view>
-      <input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/>
+      <input placeholder-class="psect" type="number" placeholder="请输入修改后的价格"  />
     </view>
     <view>单房差（每晚）：
       <text>￥588</text>
     </view>
     <view>
-      <input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/>
+      <input placeholder-class="psect" type="number" placeholder="请输入修改后的价格"  />
     </view>
 
 

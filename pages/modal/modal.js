@@ -1,4 +1,4 @@
-// pages/index/home.js
+// pages/modal/modal.js
 Page({
 
   /**
@@ -20,14 +20,6 @@ Page({
    */
   onReady: function () {
   
-  },
-  skip:function(){
-    wx.navigateTo({
-      url: '../../pages/line_details/line_details'
-    });
- 
-    
-
   },
 
   /**
@@ -69,10 +61,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    return {
-      title: '微信小程序联盟',
-      desc: '最具人气的小程序开发联盟!',
-      path: '/pages/line_details/line_details'
-    }
+  
   }
 })

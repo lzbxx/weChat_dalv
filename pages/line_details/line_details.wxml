@@ -1,6 +1,6 @@
 <view class="banner">
 
-	<swiper indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="{{duration}}">
+	<swiper bindtap="to_atlas" indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="{{duration}}">
 		<block>
 			<swiper-item>
 				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
@@ -15,12 +15,12 @@
 	</swiper>
 
 	<view class="line_title">
-		<view>
+		<view >
 			世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放
 		</view>
 		<view>
 			<image src="../../images/edit@2x.png" />
-			<view style="text-algin:center;width:100%;font-size:26rpx;color:#FE603B">
+			<view bindtap="change_title" style="text-algin:center;width:100%;font-size:26rpx;color:#FE603B;">
 				编辑
 			</view>
 		</view>
@@ -36,7 +36,7 @@
 		<view style="color:#FE603B">￥<text>1699.0</text></view>
 		<view style="text-align:right">
 
-			<view style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>
+			<view bindtap="change_money" style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>
 
 		</view>
 	</view>
@@ -178,7 +178,7 @@
 
 <view class="contact-way">
 	<view class="phone"><image src="../../images/phone@2x.png"/>电话咨询</view>
-	<view class="book">
+	<view class="book" bindtap="book">
 		立即预订
 	</view>
 	

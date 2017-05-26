@@ -1,45 +1,47 @@
 {
-  "pages":[
+  "pages": [
+    "pages/submit/submit",
+    "pages/change_price/change_price",
     "pages/line_details/line_details",
     "pages/index/home",
     "pages/order/order",
     "pages/financial/financial",
     "pages/my/my",
-    "pages/template/template"
-
+    "pages/template/template",
+    "pages/change_price/change_price"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-    "tabBar": {
-      "list": [
-        {
-          "pagePath": "pages/index/home",
-          "text": "首页",
-          "iconPath": "./images/home@2x.png",
-          "selectedIconPath": "./images/home_highlight@2x.png"
-        },
-        {
-          "pagePath": "pages/order/order",
-          "text": "订单",
-          "iconPath": "./images/order@2x.png",
-          "selectedIconPath": "./images/order_heighlight@2x.png"
-        },
-        {
-          "pagePath": "pages/financial/financial",
-          "text": "财务",
-          "iconPath": "./images/financial@2x.png",
-          "selectedIconPath": "./images/financial_highlight@2x.png"
-        },
-        {
-          "pagePath": "pages/my/my",
-          "text": "我的",
-          "iconPath": "./images/my@2x.png",
-          "selectedIconPath": "./images/my_highlight@2x.png"
-        }
-      ]
-    }
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/home",
+        "text": "首页",
+        "iconPath": "./images/home@2x.png",
+        "selectedIconPath": "./images/home_highlight@2x.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./images/order@2x.png",
+        "selectedIconPath": "./images/order_heighlight@2x.png"
+      },
+      {
+        "pagePath": "pages/financial/financial",
+        "text": "财务",
+        "iconPath": "./images/financial@2x.png",
+        "selectedIconPath": "./images/financial_highlight@2x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my@2x.png",
+        "selectedIconPath": "./images/my_highlight@2x.png"
+      }
+    ]
+  }
 }

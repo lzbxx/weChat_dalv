@@ -1,0 +1,111 @@
+page{
+	background: #F3F3F3
+}
+view{
+	background: white;
+}
+.change_header{
+	box-sizing: border-box;
+ 	padding: 18rpx 30rpx;
+
+}
+
+ .master_map image{
+	width: 100%;
+	height:300rpx;
+}
+.change_title{
+ 	font-size: 30rpx;
+ 	height: 110rpx;
+ 	overflow: hidden;
+ 	border-bottom: 1rpx solid #F1F1F1;
+ 	padding: 20rpx 30rpx;
+ 	line-height: 40rpx;
+ 	box-sizing: border-box;
+ 	word-spacing: 2rpx;
+ }
+.outbound_tourism{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 87rpx;
+	border-bottom: 1rpx solid #F1F1F1;
+	box-sizing: border-box;
+	padding: 0px 30rpx;
+}
+.outbound_tourism view:nth-of-type(1){
+	font-size: 26rpx;
+	color: #4D67EE;
+}
+.outbound_tourism view:nth-of-type(2){
+	font-size: 36rpx;
+	color: #FF6D35;
+	font-weight: 600;
+	font-family: '微软雅黑'
+	
+}
+.change_item{
+	margin-top: 10rpx;
+	
+}
+.group{
+	box-sizing: border-box;
+	padding: 0px 30rpx;
+	display: flex;
+	align-items: center;
+	border-bottom: 1rpx solid #F1F1F1;
+	text-align: right;
+	height: 70rpx;
+	font-size: 30rpx;
+	margin-top: 1rpx
+}
+.group view{
+	flex: 1;
+	height: 68rpx;
+	line-height: 68rpx;
+}
+ .group_date{
+	 text-align: left
+
+ }
+ .group_date  image{
+	height: 40rpx;
+	width: 40rpx;
+	margin-top: 14rpx
+}
+.price_input{
+	display: flex;
+	flex-wrap: wrap;
+	 box-sizing: border-box;
+	
+
+}
+.price_input view{
+	width: 50%;
+	font-size: 26rpx;
+	box-sizing: border-box;
+	padding: 0rpx 30rpx;
+	display: flex;
+	align-items: center;
+
+}
+.price_input view:nth-of-type(2n){
+	border-bottom: 1rpx solid #F1F1F1;
+	border-left: 1px solid #F1F1F1
+}
+.price_input view:nth-of-type(5){
+	border-bottom: 1rpx solid #F1F1F1;
+}
+.price_input view:nth-of-type(2n+1){
+	color: #9F9F9F
+}
+.price_input view:nth-of-type(2n+1) text{
+	color: #FF4C1C;
+}
+
+.price_input view:nth-of-type(2n) input{
+	padding-left: 10rpx;
+}
+ .psect{
+	color: #C5C5C5;
+}

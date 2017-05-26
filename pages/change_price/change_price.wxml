@@ -1,0 +1,101 @@
+<view class="change_header">
+	<view class="master_map">
+		<image  src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1495705198&di=c8d440e8912b51d06aead1beb15c4d4b&src=http://www.bizhiwa.com/uploads/allimg/2011-12/10224R5-1-1464B.jpg"/>
+	</view>
+	
+</view>
+
+	<view class="change_title">
+		是低俗的速派送速度拍摄的奇偶平时多喝水死哦好滴哦是欧式迪欧是滴哦山东
+	</view>
+	<view class="outbound_tourism">
+		<view>出境游</view>
+		<view><text style="font-size: 24rpx;">￥</text>1699.00</view>
+	</view>
+	
+<view class="change_item">
+	
+	<view class='group'>
+		<view class='group_date'>
+			<image src="../../images/group_date@2x.png"/>
+			团期
+		</view>
+		<view>
+		2031-08-02
+		</view>
+	</view>
+
+	<view  class='group'>
+		<view class='group_date'>
+				同行价/建议零售价
+			</view>
+			<view style="text-align:left">
+			自定义价
+			</view>
+
+	</view>
+	<view class="price_input">
+		<view>成人价：<text>￥1288/￥1588</text></view>
+		<view><input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/></view>
+		<view>儿童价：<text>￥1288/￥1588</text></view>
+		<view><input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/></view>
+		<view>单房差（每晚）：<text>￥588</text></view>
+		<view><input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/></view>
+	
+	
+	</view>
+	
+	<view  class='group' style="height:90rpx;">
+		
+		<button style='width:160rpx;height:60rpx;color:white;background:#4D67EE' type="default" size="mini" >保存</button>
+
+	</view>
+		
+	
+
+	
+</view>
+
+	
+<view class="change_item">
+	
+	<view class='group'>
+		<view class='group_date'>
+			<image src="../../images/group_date@2x.png"/>
+			团期
+		</view>
+		<view>
+		2031-08-02
+		</view>
+	</view>
+
+	<view  class='group'>
+		<view class='group_date'>
+				同行价/建议零售价
+			</view>
+			<view style="text-align:left">
+			自定义价
+			</view>
+
+	</view>
+	<view class="price_input">
+		<view>成人价：<text>￥1288/￥1588</text></view>
+		<view><input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/></view>
+		<view>儿童价：<text>￥1288/￥1588</text></view>
+		<view><input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/></view>
+		<view>单房差（每晚）：<text>￥588</text></view>
+		<view><input placeholder-class="psect" type="text" placeholder="请输入修改后的价格" auto-focus text/></view>
+	
+	
+	</view>
+	
+	<view  class='group' style="height:90rpx;">
+		
+		<button style='width:160rpx;height:60rpx;color:white;background:#4D67EE' type="default" size="mini" >保存</button>
+
+	</view>
+		
+	
+
+	
+</view>

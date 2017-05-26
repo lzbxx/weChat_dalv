@@ -31,3 +31,12 @@
 		</div>
 	</body>
 </html>
+
+微信小程序的那个place holder
+
+<input   placeholder-class="psection" maxlength="10" placeholder="最大输入长度10" />
+
+
+.psection{
+    color: #FFC0CB;
+}

@@ -197,6 +197,7 @@ swiper image{
    	position: fixed;
    	bottom:0;
    	width: 100%;
+    
 }
 
 
@@ -241,6 +242,5 @@ swiper image{
 .recommended image{
 	height: 40rpx;
 	width: 40rpx;
-	
 }
 

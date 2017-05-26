@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/submit/submit",
-    "pages/change_price/change_price",
     "pages/line_details/line_details",
     "pages/index/home",
     "pages/order/order",
@@ -12,9 +11,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#4D67EE",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [

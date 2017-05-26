@@ -1,1 +1,128 @@
-/* pages/submit/submit.wxss */
+page{
+    background: #F3F3F3;
+    
+}
+.body{
+	height: 1100rpx;
+	overflow: scroll;
+}
+.title{
+    background: #fff;
+}
+.title .line_title{
+    box-sizing: border-box;
+    padding: 20rpx 26rpx;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #E9E9E9;
+   
+}
+.trade_price{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 28rpx;
+    color: #191919;
+    align-items: center;
+    height: 132rpx;
+
+}
+.trade_price view{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0px 26rpx;
+}
+.trade_price view:nth-of-type(2n){
+    color: #A4A4A4;
+    text-align: right;
+
+}
+.trade_price view:nth-of-type(2n) text{
+    color: #FE603B
+}
+
+.panel{
+    background: #fff;
+    margin-top: 18rpx;
+}
+.panel .panel_header{
+    font-size: 24rpx;
+    align-items: center;
+    height: 60rpx;
+    border-bottom: 1rpx solid #E9E9E9;
+    line-height: 60rpx;
+    box-sizing: border-box;
+    padding: 0rpx 26rpx;
+}
+.panel .panel_body{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0px 26rpx;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 30rpx;
+}
+.panel .panel_body view{
+    box-sizing: border-box;
+    width: 50%;
+    height: 84rpx;
+    line-height: 84rpx;
+    
+}
+.panel .panel_body view:nth-of-type(2n){
+    text-align: right;
+}
+
+.panel .panel_body .quantity{
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-left: 100rpx;
+   
+}
+.panel .panel_body .quantity view {
+    margin-top: 15rpx;
+   text-align: center;
+   border: 1rpx solid #A4A4A4;
+    height: 50rpx;
+    line-height: 50rpx;
+
+} 
+.panel .panel_body .quantity view image{
+    height:50rpx;
+    width:50rpx;
+    transform:scale(.8)
+}
+.panel .panel_body .quantity view:nth-of-type(2){
+	border-left:none;
+	border-right: none;
+}
+.panel .panel_body .quantity .active{
+	background: #4D67EE;
+	color: white;
+}
+.order_price{
+	display: flex;
+	background: white;
+	justify-content: center;
+	align-items: center;
+	height: 96rpx;
+	position: fixed;
+	bottom: 0rpx;
+	width: 100%;
+	border-top: 1px solid #E6E6E6;
+	z-index: 100;
+	
+}
+.order_price view:nth-of-type(1){
+	flex: 4;
+	text-align: center;
+	background: white;
+	
+}
+.order_price view:nth-of-type(2){
+	flex: 3;
+	background:#FE603B ;
+	height: 100%;
+	text-align: center;
+	line-height: 96rpx;
+	color: white;
+}

@@ -1,2 +1,116 @@
-<!--pages/submit/submit.wxml-->
-<text>pages/submit/submit.wxml</text>
+
+<view class='body'>
+	<view class='title'>
+	    <view class="line_title">
+	
+	            偶尔即佛平均欧赔圣诞节破发的富婆的浦东分大佛副驾驶的佛渡刀片的批发价的地方普吉岛票反对j偶尔即佛平均欧赔圣诞节破发的富婆的浦东
+	
+	    </view>
+	    <view class='trade_price'>
+	        <view>成人(常规)</view>
+	        <view>同行价<text>￥1699.00</text></view>
+	        <view>儿童(常规)</view>
+	        <view>同行价<text>￥1699.00</text></view>
+	    </view>
+	
+	</view>
+	
+	<view class='panel'>
+	    <view class="panel_header">
+	        确认出团日期
+	    </view>
+	
+	    <view class='panel_body'>
+	        <view>出团日期</view>
+	        <view> 2017-08-06 <image  style="vertical-align:middle;height:50rpx; width:50rpx;" src="../../images/arrowhead_left@2x.png" /> </view>
+	    
+	    </view>
+	    
+	
+	
+	
+	</view>
+	
+	<view class='panel'>
+	    <view class="panel_header">
+	        选择初出行人数及类型
+	    </view>
+	
+	    <view class='panel_body'>
+	        <view>成人(常规)</view>
+	        <view class="quantity">
+	            <view><image src="../../images/reduce@2x.png"/></view>
+	            <view>2</view>
+	            <view><image src="../../images/add@2x.png"/></view>
+	        </view>
+	        <view>儿童(常规)</view>
+	           <view class="quantity">
+	            <view><image src="../../images/reduce@2x.png"/></view>
+	            <view class="active">12</view>
+	            <view><image src="../../images/add@2x.png"/></view>
+	        </view>
+	      
+	    </view>
+	    
+	
+	
+	
+	</view>
+	
+	<view class='panel'>
+	    <view class="panel_header">
+	        可选资源
+	    </view>
+	
+	    <view class='panel_body'>
+	        <view>单房差</view>
+	        <view class="quantity">
+	            <view><image src="../../images/reduce@2x.png"/></view>
+	            <view>2</view>
+	            <view><image src="../../images/add@2x.png"/></view>
+	        </view>
+	        
+	    </view>
+	    
+	
+	
+	
+	</view>
+	<view class='panel'  >
+	    <view class="panel_header">
+	        预订信息
+	    </view>
+	
+	    <view class='panel_body' style="border-bottom: 1rpx solid #E9E9E9;">
+	        <view style="width: 25%;">联系人:</view>
+	        <view class="quantity" style="padding-left: 10rpx;vertical-align: middle;width: 70%;text-align: left;justify-content: flex-start;align-items: center;">
+	            <input  placeholder="填写常用联系人"  text />
+	        </view>
+	        <view style="width: 25%;">手机号：</view>
+	        <view class="quantity" style="padding-left: 10rpx;vertical-align: middle;width: 70%;text-align: left;justify-content: flex-start;align-items: center;">
+	            <input  placeholder="填写常用联系人"  number />
+	        </view>
+	        
+	        <view style="width: 25%;">订单备注：</view>
+	        <view class="quantity" style="padding-left: 10rpx;vertical-align: middle;width: 70%;text-align: left;justify-content: flex-start;align-items: center;">
+	            <input  placeholder="填写常用联系人"  text />
+	        </view>
+	        
+	        
+	    </view>
+	    
+	
+	
+	
+	</view>
+
+</view>
+<view class='order_price'>
+	<view class=''>
+		订单总额:
+		<text style="color:#FE603B;font-size: 32rpx;">￥4099.00</text>
+	</view>
+	<view>
+		提交订单
+	</view>
+</view>

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/financial/financial",
     "pages/order/order",
+    "pages/financial/financial",
     "pages/my/my",
     "pages/index/home",
     "pages/line_atlas/line_atlas",

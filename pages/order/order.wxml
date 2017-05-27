@@ -1,0 +1,103 @@
+<scroll-view scroll-x class="swiper-tab"  scroll-left="{{currentTab*100}}">  
+    <view class="tab_head"   >
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+            <image style="height:30rpx;width:30rpx" src="../../images/line_order_highlight@2x.png" wx:if="{{currentTab==0}}" />
+            <image style="height:30rpx;width:30rpx" src="../../images/line_order@2x.png" wx:if="{{currentTab!=0}}" />
+            路线订单
+        
+        </view>  
+
+
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+            <image style="height:30rpx;width:30rpx" src="../../images/visa_order@2x.png" wx:if="{{currentTab!=1}}" />
+            <image style="height:30rpx;width:30rpx" src="../../images/visa_order_highlight@2x.png" wx:if="{{currentTab==1}}" />
+            签证订单
+        </view>  
+
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+
+            <image style="height:30rpx;width:30rpx" src="../../images/wifi_order@2x.png" wx:if="{{currentTab!=2}}"/>
+            <image style="height:30rpx;width:30rpx" src="../../images/wifi_order_highlight@2x.png" wx:if="{{currentTab==2}}"/>
+
+            wifi订单
+        
+        </view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">
+             <image style="height:30rpx;width:30rpx" src="../../images/ticket_order@2x.png" wx:if="{{currentTab!=3}}" />
+             <image style="height:30rpx;width:30rpx" src="../../images/ticket_order@2x.png" wx:if="{{currentTab==3}}" />
+
+
+
+
+            门票订单
+        </view>
+        <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">
+             <image style="height:30rpx;width:30rpx" src="../../images/ticket_order_highlight@2x.png" />
+            通用订单
+        
+        
+        </view>  
+    </view> 
+</scroll-view>
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 我是哈哈 -->  
+    <swiper-item>  
+
+      <view class="line_order">
+        <view class="line_title">泰国——曼谷——芭提雅</view>
+        
+        <view class="line_content">
+           <view>
+                <image  src="http://pic.jj20.com/up/allimg/1011/05241G14R6/1F524114R6-4.jpg" />
+           </view>
+
+           <view class="line_content_son">   
+                 <view >
+                    <view style="font-size:26rpx;color:#FE603B" >已付预付款</view>
+                    <view style="font-size:26rpx;color:#C6C6C6">团期：2017-09-03</view>
+                </view>
+
+                <view style="margin-top:28rpx">
+                    <view style="font-size:26rpx;color:#3B3B3B">应付金额</view>
+                    <view style="font-size:30rpx;color:#FE603B" >￥3399.00</view>
+                </view>
+
+           </view>
+        </view>
+      
+      </view>  
+
+
+
+
+
+    </swiper-item>  
+    <!-- 我是呵呵 -->  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <swiper-item>  
+      <view>2</view>  
+    </swiper-item>  
+    <!-- 我是嘿嘿 -->  
+    <swiper-item>  
+      <view>3</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>4</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>5</view>  
+    </swiper-item>  
+</swiper>  
+

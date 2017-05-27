@@ -1,2 +1,26 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="head">
+    <view class="">
+         <image style="height:130rpx; width:130rpx;border-radius: 50%;border:2px solid #4D67EE" src="http://img.bitscn.com/upimg/allimg/c160120/1453262W253120-12J05.jpg" />
+    </view>
+    <view style="font-size:32rpx;">李元芳</view>
+    <view style="font-size:26rpx"> 电话:18888888888</view>
+
+</view>
+
+<view class="function_list">
+    <view class="function_item" wx:for="{{fun_list}}">
+       <view>
+            <image src="{{item.l_img}}" />
+       </view>
+        
+        <view style="padding-left:18rpx">
+            {{item.name}}
+        </view>
+           
+         <view style="flex:1">
+             <image  style="float:right" src="../../images/arrowhead_left@2x.png" />
+        </view>
+        
+    </view>
+        
+</view>

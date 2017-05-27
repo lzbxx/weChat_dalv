@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/modal/modal",
+    "pages/order/order",
+    "pages/financial/financial",
+    "pages/my/my",
     "pages/index/home",
     "pages/line_atlas/line_atlas",
     "pages/submit/submit",
     "pages/line_details/line_details",
-    "pages/order/order",
-    "pages/financial/financial",
-    "pages/my/my",
-    "pages/change_price/change_price"
+    "pages/change_price/change_price",
+    "pages/modal/modal"
+     
     
 
   ],
@@ -16,9 +17,15 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4D67EE",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "selectedColor": "#4D67EE"
+ 
+
   },
   "tabBar": {
+      "color": "#777A7E",
+      "selectedColor": "#4D67EE",
+      "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/home",

@@ -1,1 +1,39 @@
-/* pages/my/my.wxss */
+.head{
+    height: 300rpx;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 26rpx 
+   
+}
+.head view{
+    text-align: center;
+    padding-top:10rpx;
+    
+}
+.function_list{
+    margin-top: 10rpx;
+    background: #fff;
+}
+
+.function_list .function_item{
+    display: flex;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-bottom: 1rpx solid #ECECEC;
+    padding: 24rpx 30rpx;
+    vertical-align: middle;
+
+}
+
+.function_list .function_item text{
+    font-size: 40rpx;
+    padding-left: 20rpx;
+    line-height: 20rpx;
+    height: 50rpx;
+    
+}
+.function_list image{
+    height: 50rpx;
+    width: 50rpx;
+   
+}

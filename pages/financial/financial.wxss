@@ -1,1 +1,75 @@
-/* pages/financial/financial.wxss */
+
+.financial_header{
+    height: 192rpx;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1rpx solid #EFEFEF ;
+}
+.financial_header view{
+    width: 100%;
+   justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.financial_header .financial_money1{
+    height: 100rpx;
+    font-size: 50rpx;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+.financial_money2{
+    font-size: 24rpx;
+    color: #B0B0B0;
+    font-weight: 100;
+}
+
+.financial_means{
+    display: flex;
+    height: 106rpx;
+     align-items: center;
+     background: #fff
+}
+.financial_means view{
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    border-right: 1rpx  solid #C6C6C6;
+   
+}
+
+.financial_fun{
+    display: flex;
+    margin-top: 20rpx;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+}
+.financial_fun > view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 188rpx;
+    align-self: center;
+    flex-wrap: wrap;
+    border-right: 0.5rpx solid #EFEFEF;
+    border-bottom: 0.5rpx solid #EFEFEF;
+    box-sizing: border-box;
+}
+/*.financial_fun  view:nth-of-type(n > 4){
+
+}*/
+.financial_fun > view view{
+    width: 100%;
+    text-align: center;
+}
+.financial_fun image{
+    height: 56rpx;
+    width: 56rpx;
+}

@@ -1,0 +1,47 @@
+<view class="supplier_header">
+
+<view class="supplier_content">
+        <view class="supplier_title">输入目的地或供应商名称</view>
+        <view class="supplier_serch">
+            <view class="search_input">
+            <input  placeholder="请输入目的地或供应商" placeholder-style="font-size:30rpx;color:#A4A4A4"  text/>
+            </view>
+            <view class="search_btn">开始搜索</view>
+        </view>
+</view>
+
+</view>
+ <view class="supplier_list_title">本月最新加盟</view>
+
+<view class="supplier_list">
+   <view>
+      <view>供应商名称：</view>
+      <view>快帮行</view>
+   
+   </view>
+   <view>
+      <view>公司全称：</view>
+      <view>开始掉时候是滴是滴</view>
+   
+   </view>
+<view>
+      <view>业务联系人：</view>
+      <view>快帮行</view>
+   
+   </view>
+   <view>
+      <view>销售目的地：</view>
+      <view>快帮行</view>
+   
+   </view>
+   <view>
+      <view>联系人电话：</view>
+      <view>18310084054</view>
+   
+   </view>
+
+
+
+
+
+</view>

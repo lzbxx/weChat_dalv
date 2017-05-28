@@ -1,0 +1,26 @@
+<view class="financial_header">
+    <view class="financial_money1" style="color:#FF7725">
+    4890.00
+     <view class="financial_money2">
+     <image style="height:30rpx;width:30rpx" src="../../images/my_highlight@2x.png"></image>
+     我的佣金</view>
+    </view>
+</view>
+
+<view class="function_list">
+    <view class="function_item" wx:for="{{fun_list}}">
+       <view>
+            <image src="{{item.l_img}}" />
+       </view>
+        
+        <view style="padding-left:18rpx">
+            {{item.name}}
+        </view>
+           
+         <view style="flex:1">
+             <image  style="float:right" src="../../images/arrowhead_left@2x.png" />
+        </view>
+        
+    </view>
+        
+</view>

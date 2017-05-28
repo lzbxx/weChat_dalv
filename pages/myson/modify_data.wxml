@@ -1,0 +1,79 @@
+<view class="item" >
+    <view class="item_title" style="width:20%">姓名:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx"   placeholder="陆兆恺"   /></view>
+</view>
+
+<view class="item" >
+    <view class="item_title" style="width:20%">昵称:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx"   placeholder="请输入昵称"   /></view>
+</view>
+
+
+<view class="item" >
+    <view class="item_title" style="width:20%">性别:</view>
+    <view class="item_body" >
+        <view class="section">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                    <view class="picker" style="color:#C4C4C4;font-size:30rpx">
+                    当前选择：{{array[index]}}
+                    </view>
+            </picker>
+        </view>
+
+
+   </view>
+</view>
+
+<view class="item" >
+    <view class="item_title" style="width:20%">年龄:</view>
+    <view class="item_body" >
+        <view class="section">
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                <view class="picker">
+                {{date}}
+                </view>
+             </picker>
+        </view>
+   </view>
+</view>
+
+<view class="item" >
+    <view class="item_title" style="width:20%">从业时间:</view>
+    <view class="item_body" style="display:flex;" >
+     <input placeholder-style="color:#C4C4C4;font-size:30rpx;padding-right:20rpx" type="number"   placeholder="5"/>
+     <text style="color:#C4C4C4;font-size:30rpx" >年</text>
+     </view>
+</view>
+
+<view class="item" >
+    <view class="item_title" style="width:20%">标签:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx"   placeholder="最多五个，用逗号隔开"   /></view>
+</view>
+
+<view class="item" >
+    <view class="item_title" style="width:20%">手机:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx"  type="number"  placeholder="1111111111"   /></view>
+</view>
+
+
+<view class="item" >
+    <view class="item_title" style="width:20%">邮箱:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx"  type="number"  placeholder="22323232@133.com"   /></view>
+</view>
+
+
+<view class="item" style="margin-top:10rpx;color:#fff;box-sizing:border-box;background:#4D67EE;border-radius:10rpx"  >
+ 保存
+</view>
+
+
+<view class="item" style="margin-top:10rpx;" >
+
+修改密码
+   
+</view>

@@ -60,7 +60,7 @@ line-clamp: 3; 行数
 }
 
 第二种方式
-  <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
+  <textarea placeholder="placeholder颜色是红色的"   />
 
 
 
@@ -95,3 +95,11 @@ line-clamp: 3; 行数
      "text": "开心测试"  
    }]  
  },  
+
+ <view class="section">
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>

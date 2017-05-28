@@ -1,5 +1,12 @@
 {
   "pages": [
+    "pages/myson/feedbackList",
+    "pages/myson/supplier_search",
+    "pages/myson/guestList",
+    "pages/myson/guest",
+    "pages/myson/recommend",
+    "pages/myson/change_pwd",
+    "pages/myson/modify_data",
     "pages/order/order",
     "pages/financial/financial",
     "pages/my/my",

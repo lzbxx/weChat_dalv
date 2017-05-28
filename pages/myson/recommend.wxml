@@ -1,0 +1,21 @@
+<view class="recommend_item">
+    <view>
+        <image src="http://pic32.photophoto.cn/20140814/0037037539196839_b.jpg" />
+    </view>
+    
+    <view class="messages">
+      <view class="title">    
+        届时将上升到华盛顿和圣诞节几点开始几点开始点击oh死哦好搜ID和搜到届时将上升到华盛顿和圣诞节几点开始几点开始点击oh死哦好搜ID和搜到届时将上升到华盛顿和圣诞节几点开始几点开始点击oh死哦好搜ID和搜到
+      </view>
+      <view style="color:#7185FC;padding-top:30rpx;font-size:26rpx">北京出发</view>
+
+        <view style="width:100%; position:absolute;bottom:0px;display:flex;height:50rpx;algin-items:center;box-sizing:border-box;">
+            <view style="width:50%;color:#FE603B;font-size:34rpx">￥12999.00</view>
+            <view style="width:50%;">
+                    
+            </view>
+            <view class="delete">删除</view>
+        </view>
+        
+    </view>
+</view>

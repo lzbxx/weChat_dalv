@@ -1,0 +1,33 @@
+.item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1rpx solid #EBEBEB;
+    background:white;
+    height: 88rpx;
+    justify-content: center;
+}
+.item > view{
+    box-sizing: border-box;
+    padding: 0rpx 26rpx;
+    background:white;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+.item .item_title{
+    font-size: 36rpx;
+    flex: 2;
+}
+.item_body {
+    flex: 4;
+    text-align: right;
+}
+.item_body input{
+    height: 88rpx;
+}
+.item_body :-moz-placeholder{
+    color: red
+}
+.item_body  {
+    color:#C4C4C4;
+    font-size:30rpx
+}

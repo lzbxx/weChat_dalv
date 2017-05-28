@@ -1,0 +1,48 @@
+.recommend_item{
+    height: 250rpx;
+    box-sizing: border-box;
+    padding: 28rpx 30rpx;
+    border-bottom: 1rpx solid #DBDBDB;
+    display: flex;
+}
+.recommend_item > view {
+    flex: 1
+
+}
+
+.recommend_item image{
+    width: 100%;
+    height: 100%;
+}
+view{
+    background: #fff
+}
+.messages{
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    font-size: 28rpx;
+    position: relative;
+}
+.title{
+     	overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 24rpx;
+     
+        /*position: absolute*/
+}
+
+.delete{
+    height: 30rpx;
+    width: 40rpx;
+    border:1rpx solid #ccc;
+    text-align: center;
+    line-height: 20rpx;
+    font-size: 20rpx;
+    position: absolute;
+    bottom: 4rpx;
+    right: 20rpx;
+    padding: 4rpx 5rpx;
+}

@@ -1,0 +1,29 @@
+@import "../../pages/my/my.wxss";
+.financial_header{
+    height: 192rpx;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1rpx solid #EFEFEF ;
+}
+.financial_header view{
+    width: 100%;
+   justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.financial_header .financial_money1{
+    height: 100rpx;
+    font-size: 50rpx;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+.financial_money2{
+    font-size: 24rpx;
+    color: #B0B0B0;
+    font-weight: 100;
+}

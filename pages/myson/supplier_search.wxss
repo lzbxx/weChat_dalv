@@ -1,0 +1,72 @@
+.supplier_header{
+    height: 252rpx;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+
+}
+.supplier_content{
+    height: 126rpx;
+    width: 100%
+}
+.supplier_title{
+    text-align: center;
+    width: 100%;
+    font-size: 26rpx;
+    color: #3B3B3B;
+}
+.supplier_serch{
+    width: 100%;
+    display: flex;
+    margin-top: 22rpx;
+    justify-content: center;
+    align-items: center;
+    height: 74rpx;
+    border-radius: 20rpx;
+}
+.search_input{
+    height: 76rpx;
+    background: #F1F1F1;
+    border-radius: 10rpx 0 0 10rpx;
+}
+.search_input input{
+    padding-left: 20rpx;
+    height: 76rpx;
+    width: 100%;
+}
+.search_btn{
+    height: 74rpx;
+    background: #FC8F59;
+    font-size: 24rpx;
+    color: #FFFFFF;
+    padding:0rpx 10rpx;
+    line-height: 74rpx;
+    border-radius:  0 10rpx 10rpx 0;
+}
+.supplier_list_title{
+    height: 62rpx;
+    color: #FC8F59;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    line-height: 62rpx;
+    background: #fff;
+    margin-top: 18rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.supplier_list{
+    border: 20rpx  solid #fff;
+    height: 300rpx;
+    font-size: 26rpx;
+  
+}
+.supplier_list > view{
+    padding-left: 20rpx;
+    display: flex;
+    margin-top: 24rpx;
+}
+.supplier_list > view view:nth-of-type(2){
+    color: #7082F1
+}

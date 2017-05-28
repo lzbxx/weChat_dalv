@@ -1,0 +1,15 @@
+<view class="item" >
+    <view class="item_title" style="width:20%">旧密码:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx" password   placeholder="请输入旧密码"   /></view>
+</view>
+<view class="item" >
+    <view class="item_title" style="width:20%">新密码:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx" password  placeholder="请输入新密码"   /></view>
+</view>
+<view class="item" >
+    <view class="item_title" style="width:20%">确认密码:</view>
+    <view class="item_body" >
+    <input placeholder-style="color:#C4C4C4;font-size:30rpx" password  placeholder="请再次输入新密码"   /></view>
+</view>

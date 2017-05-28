@@ -1,0 +1,26 @@
+<view class="statistics">
+    <view class="statistics_l">
+        <image src="../../images/guest.png" style="height:40rpx;width:40rpx"></image>
+        <text>我的直客列表</text>
+    </view>
+
+    <view class="statistics_r">
+    共<text style="color:#FF5D2B;font-size:40rpx;padding:0rpx 2rpx">{{guestList.length}}</text>人   
+    </view>
+
+</view>
+
+<view class="guest_list" wx:for="{{guestList}}">
+    <view class="guest_header">
+
+          <image  src="{{item.img}}"/>
+    
+    </view>
+    <view class="guest_msg" >
+        <view class="guest_top">{{item.name}}</view>
+        <view class="guest_middle">{{item.phone}}</view>
+        <view class="guest_bottom">绑定时间:{{item.time}}</view>
+    
+    </view>
+
+</view>

@@ -1,1 +1,36 @@
-/* pages/myson/feedbackList.wxss */
+.faceback_list{
+    display: flex;
+    height: 256rpx;
+    box-sizing: border-box;
+    padding: 28rpx 30rpx;
+    background: #fff;
+  
+}
+
+.faceback_msg{
+    font-size: 24rpx;
+    color: #ABABAB;
+  
+
+}
+
+.faceback_msg text{
+    color: #424141
+}
+.faceback_msg view{
+    box-sizing: border-box;
+    padding-bottom: 10rpx;
+    padding-left:10rpx
+}
+.text{
+    overflow: hidden;
+ 	text-overflow: ellipsis;
+ 	display: -webkit-box;
+ 	-webkit-line-clamp: 3;
+ 	-webkit-box-orient: vertical;
+}
+.star{
+    display: flex;
+    align-items: center;
+
+}

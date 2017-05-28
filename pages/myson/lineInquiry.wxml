@@ -1,0 +1,25 @@
+<view class="line_item">
+    <view>出发城市</view>
+    <view>出发城市 <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+
+<view class="line_item">
+    <view>目的地</view>
+    <view>选择目的地 <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+
+
+<view class="line_item">
+    <view>旅游人数</view>
+    <view>选择人数 <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+
+<view class="line_item">
+    <view>出发时间</view>
+    <view>选择日期 <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+
+<view class="line_item" style="height:160rpx;padding-top:20rpx;">
+    <view style="align-self: flex-start">备注</view>
+    <view><textarea placeholder="" style="height:140rpx" /></view>
+</view>

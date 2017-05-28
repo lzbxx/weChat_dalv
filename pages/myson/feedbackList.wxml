@@ -1,2 +1,22 @@
-<!--pages/myson/feedbackList.wxml-->
-<text>pages/myson/feedbackList.wxml</text>
+<view class="faceback_list">
+    <view>
+        <image style="height:200rpx;width:200rpx" src="http://img4.imgtn.bdimg.com/it/u=1908778906,197691488&fm=214&gp=0.jpg" />
+    </view>
+
+    <view class="faceback_msg">
+
+        <view>
+            <view>意见反馈时间：<text>2017-06-23 17:20</text></view>
+             <view>意见反人：<text>李沁</text></view>
+              <view class="star">评星 
+              
+                  <image wx:for="{{4}}" style="height:30rpx;width:30rpx;margin-left:12rpx;" src="../../images/star.png" />
+                
+              </view>
+               <view class="text">反馈内容：<text>接电话收到回复打火机返回东方今典黄飞鸿接电话地方很简单很简单地方回到家客户反馈的多久发货的借口飞</text></view>
+        </view>
+        
+    </view>
+
+    
+</view>

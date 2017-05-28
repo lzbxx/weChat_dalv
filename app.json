@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/myson/lineInquiry",
     "pages/myson/feedbackList",
     "pages/myson/supplier_search",
     "pages/myson/guestList",

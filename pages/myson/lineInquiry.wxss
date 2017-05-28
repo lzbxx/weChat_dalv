@@ -1,0 +1,24 @@
+view{
+    box-sizing: border-box;
+    background: #fff;
+
+}
+
+
+.line_item{
+    display: flex;
+    padding: 0rpx 20rpx;
+    height: 88rpx;
+    align-items: center;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #EBEBEB;
+    
+}
+.line_item > view:nth-of-type(2){
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #BBBBBB
+}
+

@@ -1,0 +1,22 @@
+<view class="line_item">
+    <view>意见反馈</view>
+    <view> 
+    <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+<view class="line_item">
+    <view>关于大旅</view>
+    <view> 
+    <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+<view class="line_item">
+    <view>清理缓存</view>
+    <view> 
+    <image style="height:30rpx;width:30rpx" src="../../images/arrowhead_left@2x.png" /></view>
+</view>
+
+
+<view class="line_item1" style="margin-top:20rpx;">
+
+    清理缓存
+    
+</view>

@@ -1,0 +1,10 @@
+/* pages/myson/currency.wxss */
+@import "../../pages/myson/lineInquiry.wxss";
+
+
+.line_item1{
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    color: #FE603B;
+}

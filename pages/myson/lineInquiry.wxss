@@ -12,6 +12,7 @@ view{
     align-items: center;
     font-size: 30rpx;
     border-bottom: 1rpx solid #EBEBEB;
+   
     
 }
 .line_item > view:nth-of-type(2){

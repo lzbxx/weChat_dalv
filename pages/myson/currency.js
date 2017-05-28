@@ -1,24 +1,11 @@
-// pages/my/my.js
+// pages/myson/currency.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    fun_list: [
-    { l_img:"../../images/modify_personal_data@2x.png",name:"修改个人中心资料",router:"modify_data"},
-    { l_img: "../../images/my_recommendation@2x.png", name: "我的推荐",router: "recommend"},
-    { l_img: "../../images/my_direct_guest@2x.png", name: "我的直客", router: "guest"},
-    { l_img: "../../images/feedback@2x.png", name: "意见反馈",router:"feedbackList"},
-    { l_img: "../../images/vendor_inquiries@2x.png", name: "供应商查询",router:"supplier_search"},
-    { l_img: "../../images/line_inquiry@2x.png", name: "线路询价",router:"lineInquiry"}]
-  },
-  router: function (e) {
-      var router = e.currentTarget.dataset.router
-    
-      wx.navigateTo({
-          url: '../../pages/myson/' + router
-      })
+  
   },
 
   /**
@@ -76,5 +63,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-
 })

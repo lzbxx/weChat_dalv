@@ -44,5 +44,11 @@ view{
     position: absolute;
     bottom: 4rpx;
     right: 20rpx;
-    padding: 4rpx 5rpx;
+    padding: 4rpx 8rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rpx;
+    color:#3B3B3B;
+
 }

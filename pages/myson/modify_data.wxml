@@ -72,7 +72,7 @@
 </view>
 
 
-<view class="item" style="margin-top:10rpx;" >
+<view class="item" style="margin-top:10rpx;" bindtap="router">
 
 修改密码
    

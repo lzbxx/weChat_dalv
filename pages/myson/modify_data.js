@@ -27,5 +27,10 @@ Page({
     this.setData({
       index: e.detail.value
     })
+  },
+  router:function(){
+      wx.navigateTo({
+          url: '../../pages/myson/change_pwd',
+      })
   }
 })

@@ -1,0 +1,57 @@
+page{
+    background: #fff;
+}
+view{
+    box-sizing: border-box;
+}
+.login_header{
+    height: 310rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.login_header view view{
+
+    text-align: center;
+}
+
+.login_header view view:nth-of-type(2){
+    margin-top: 24rpx;
+    font-size: 46rpx;
+    color: #444444;
+}
+.form_content{
+    padding: 0rpx 30rpx
+}
+
+.form_content > view{
+    height: 104rpx;
+    border-bottom: 1rpx solid #ddd;
+    position: relative;
+}
+.form_content > view input{
+    height: 100rpx;
+}
+.form_content > view image{
+    position: absolute;
+    top: 50%;
+    right:30%;
+    transform: translateY(-50%)
+}
+.form_content .login_btn{
+    border: none;
+    background: #536BF8;
+    line-height: 104rpx;
+    color: #fff;
+    text-align: center;
+    margin-top: 40rpx;
+    border-radius: 10rpx;
+}
+
+.form_content text{
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}

@@ -1,14 +1,11 @@
-// pages/myson/guest.js
+// pages/register/register.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      fun_list: [{ l_img: "../../images/guest.png", name: "我的直客列表", router: "guestList"},
-          { l_img: "../../images/guest_order.png", name: "直客机票订单",router:"guestList" },
-          { l_img: "../../images/assess.png", name: "直客的评价" },
-     ]
+  
   },
 
   /**
@@ -65,12 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  router: function (e) {
-      var router = e.currentTarget.dataset.router
-
-      wx.navigateTo({
-          url: '../../pages/myson/' + router
-      })
-  },
+  }
 })

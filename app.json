@@ -1,5 +1,8 @@
 {
   "pages": [
+      "pages/index/home",
+    "pages/register/register",
+    "pages/login/login",
     "pages/my/my",
     "pages/myson/currency",
     "pages/myson/lineInquiry",
@@ -12,7 +15,7 @@
     "pages/myson/modify_data",
     "pages/order/order",
     "pages/financial/financial",
-    "pages/index/home",
+    
     "pages/line_atlas/line_atlas",
     "pages/submit/submit",
     "pages/line_details/line_details",

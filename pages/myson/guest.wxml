@@ -8,7 +8,7 @@
 </view>
 
 <view class="function_list">
-    <view class="function_item" wx:for="{{fun_list}}">
+    <view class="function_item" wx:for="{{fun_list}}" bindtap="router" data-router="{{item.router}}">
        <view>
             <image src="{{item.l_img}}" />
        </view>

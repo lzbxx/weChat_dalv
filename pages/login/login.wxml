@@ -1,0 +1,28 @@
+<view class="login_header">
+    <view>
+        <view>
+            <image style="height:80rpx;width:80rpx" src="../../images/logo@2x.png" /></view>
+        <view>
+            大旅账号登录
+        
+        </view>
+    </view>
+    
+</view>
+
+
+<view class="form_content">
+    <view>
+        <input placeholder="国内手机号"  maxlength="11" number />
+        <image style="height:40rpx;width:40rpx" src="../../images/close.png" />
+    </view>
+
+    <view>
+        <input placeholder="登录密码"  maxlength="11" number />
+        <image style="height:40rpx;width:40rpx" src="../../images/close.png" />
+    </view>
+
+    <view class="login_btn">登录</view>
+    <text>忘记密码？</text>
+</view>
+

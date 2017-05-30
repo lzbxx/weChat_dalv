@@ -6,9 +6,9 @@
 	    </view>
 	    <view class='trade_price'>
 	        <view>成人(常规)</view>
-	        <view>同行价<text>￥1699.00</text></view>
+	        <view>同行价<text>￥{{adultPrice}}.00</text></view>
 	        <view>儿童(常规)</view>
-	        <view>同行价<text>￥1699.00</text></view>
+	        <view>同行价<text style="width:300rpx;">￥{{childPrice}}.00</text></view>
 	    </view>
 	
 	</view>
@@ -38,13 +38,13 @@
 	        <view>成人(常规)</view>
 	        <view class="quantity">
 	            <view data-role="adult" bindtap="reduce"><image  src="../../images/reduce@2x.png"/></view>
-	            <view class="active"><input type="number" value="{{adult}}" /></view>
+	            <view class="active"><input data-role="adult" bindblur="change" type="number" value="{{adult}}" /></view>
 	            <view data-role="adult" bindtap="add"><image  src="../../images/add@2x.png"/></view>
 	        </view>
 	        <view>儿童(常规)</view>
 	           <view class="quantity">
 	            <view data-role="child" bindtap="reduce"><image  src="../../images/reduce@2x.png"/></view>
-	            <view class="active"><input type="text" value="{{child}}"/></view>
+	            <view class="active"><input data-role="child" bindblur="change" type="text" value="{{child}}"/></view>
 	            <view data-role="child" bindtap="add"><image  src="../../images/add@2x.png"/></view>
 	        </view>
 	      
@@ -64,7 +64,7 @@
 	        <view>单房差</view>
 	        <view class="quantity">
 	            <view data-role="singleRoom" bindtap="reduceSingle"><image  src="../../images/reduce@2x.png"/></view>
-	            <view class="active{{singleRoom==0 ? 'active':''}}"><input type="number" value="{{singleRoom}}"/></view>
+	            <view class="active{{singleRoom==0 ? 'active':''}}"><input  bindblur="changeS" data-role="singleRoom" type="number" value="{{singleRoom}}"/></view>
 	            <view data-role="singleRoom" bindtap="add"><image  src="../../images/add@2x.png"/></view>
 	        </view>
 	        
@@ -107,7 +107,7 @@
 <view class='order_price'>
 	<view class=''>
 		订单总额:
-		<text style="color:#FE603B;font-size: 32rpx;">￥4099.00</text>
+		<text style="color:#FE603B;font-size: 32rpx;">￥{{allPirce}}.00</text>
 	</view>
 	<view>
 		提交订单

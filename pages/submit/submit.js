@@ -5,13 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    adult:1,
+    child:1,
+    singleRoom:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
   
   },
 
@@ -56,11 +59,41 @@ Page({
   onReachBottom: function () {
   
   },
+  add:function(e){
+      var role= e.currentTarget.dataset.role
+      var a=this.data[role];
+      a++
+    this.setData({[role]:a})
+  },
+  reduce:function(e){
+      var role= e.currentTarget.dataset.role
+      var a=this.data[role];
+      if (a==1) {
+        wx.showToast({
+          title: '数量不能为0',
+          icon: 'fail'
+        })
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+        return false;
+      }
+      a--
+      this.setData({[role]:a})
+  },
+  reduceSingle:function(e){
+    var role= e.currentTarget.dataset.role
+      var a=this.data[role];
+      if (a==0) {
+        wx.showToast({
+          title: '数量不能小于0'
+        })
+
+        return false;
+      }
+      a--
+      this.setData({[role]:a})
+
   }
+
+
+
 })

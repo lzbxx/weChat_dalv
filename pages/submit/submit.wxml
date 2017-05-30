@@ -2,9 +2,7 @@
 <view class='body'>
 	<view class='title'>
 	    <view class="line_title">
-	
 	            偶尔即佛平均欧赔圣诞节破发的富婆的浦东分大佛副驾驶的佛渡刀片的批发价的地方普吉岛票反对j偶尔即佛平均欧赔圣诞节破发的富婆的浦东
-	
 	    </view>
 	    <view class='trade_price'>
 	        <view>成人(常规)</view>
@@ -39,15 +37,15 @@
 	    <view class='panel_body'>
 	        <view>成人(常规)</view>
 	        <view class="quantity">
-	            <view><image src="../../images/reduce@2x.png"/></view>
-	            <view>2</view>
-	            <view><image src="../../images/add@2x.png"/></view>
+	            <view data-role="adult" bindtap="reduce"><image  src="../../images/reduce@2x.png"/></view>
+	            <view class="active"><input type="number" value="{{adult}}" /></view>
+	            <view data-role="adult" bindtap="add"><image  src="../../images/add@2x.png"/></view>
 	        </view>
 	        <view>儿童(常规)</view>
 	           <view class="quantity">
-	            <view><image src="../../images/reduce@2x.png"/></view>
-	            <view class="active">12</view>
-	            <view><image src="../../images/add@2x.png"/></view>
+	            <view data-role="child" bindtap="reduce"><image  src="../../images/reduce@2x.png"/></view>
+	            <view class="active"><input type="text" value="{{child}}"/></view>
+	            <view data-role="child" bindtap="add"><image  src="../../images/add@2x.png"/></view>
 	        </view>
 	      
 	    </view>
@@ -59,15 +57,15 @@
 	
 	<view class='panel'>
 	    <view class="panel_header">
-	        可选资源
+	        可选项
 	    </view>
 	
 	    <view class='panel_body'>
 	        <view>单房差</view>
 	        <view class="quantity">
-	            <view><image src="../../images/reduce@2x.png"/></view>
-	            <view>2</view>
-	            <view><image src="../../images/add@2x.png"/></view>
+	            <view data-role="singleRoom" bindtap="reduceSingle"><image  src="../../images/reduce@2x.png"/></view>
+	            <view class="active{{singleRoom==0 ? 'active':''}}"><input type="number" value="{{singleRoom}}"/></view>
+	            <view data-role="singleRoom" bindtap="add"><image  src="../../images/add@2x.png"/></view>
 	        </view>
 	        
 	    </view>
@@ -86,6 +84,7 @@
 	        <view class="quantity" style="padding-left: 10rpx;vertical-align: middle;width: 70%;text-align: left;justify-content: flex-start;align-items: center;">
 	            <input  placeholder="填写常用联系人"  text />
 	        </view>
+
 	        <view style="width: 25%;">手机号：</view>
 	        <view class="quantity" style="padding-left: 10rpx;vertical-align: middle;width: 70%;text-align: left;justify-content: flex-start;align-items: center;">
 	            <input  placeholder="填写常用联系人"  maxlength="11" type="number" />

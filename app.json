@@ -1,6 +1,7 @@
 {
   "pages": [
-      "pages/index/home",
+    "pages/submit/submit",
+    "pages/index/home",
     "pages/register/register",
     "pages/login/login",
     "pages/my/my",
@@ -15,9 +16,8 @@
     "pages/myson/modify_data",
     "pages/order/order",
     "pages/financial/financial",
-    
     "pages/line_atlas/line_atlas",
-    "pages/submit/submit",
+    
     "pages/line_details/line_details",
     "pages/change_price/change_price",
     "pages/modal/modal"

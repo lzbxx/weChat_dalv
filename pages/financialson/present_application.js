@@ -1,4 +1,4 @@
-// pages/lgin/login.js
+// pages/financialson/present_application.js
 Page({
 
   /**
@@ -56,9 +56,11 @@ Page({
   onReachBottom: function () {
   
   },
-  toregister:function(){
-      wx.navigateTo({
-          url: '../../pages/register/register',
-      })
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
   }
 })

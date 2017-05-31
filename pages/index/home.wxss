@@ -48,6 +48,7 @@ page{
 .heder .search image:nth-of-type(2){
     position: absolute;
     right: 0px;
+    
 }
 
 .heder .search input{
@@ -60,7 +61,9 @@ page{
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
-    padding: 0px 20px
+    padding: 0px 10px;
+    position: relative;
+   
     
 }
 .heder .message image:nth-of-type(1){
@@ -77,12 +80,13 @@ page{
     background: rgba(0, 0, 0,.5);
     padding:5px ;
     margin-left: 5px;
-    border-radius: 5px
+    border-radius: 5px;
+    font-size: 30rpx
 }
 .heder .message .name view:nth-of-type(1) text{
     display: inline-block;
     background:#FF5F63;
-    font-size: 13px;
+    font-size: 10px;
     padding: 2px;
 }
 .heder .message .name view:nth-of-type(2){
@@ -155,4 +159,34 @@ page{
 .list .line_list .list_item .price_destination view:nth-of-type(2){
     color: orange;
     
+}
+.btn{
+    color: #fff;
+    background: rgba(255, 255, 255,.5);
+    font-size: 24rpx;
+    padding: 20rpx 40rpx;
+    height: 30rpx;
+    border-radius: 10rpx
+}
+.adviser{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*display: flex;
+    justify-content: center;*/
+    
+}
+.adviser  .adviser_img{
+
+display: flex;
+justify-content: center;
+margin-top: 4rpx;
+
+
+
+
+}
+.adviser .adviser_text{
+    text-align: center;
+    margin-top: 4rpx
 }

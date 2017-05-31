@@ -1,68 +1,70 @@
 {
-  "pages": [
-    "pages/submit/submit",
-    "pages/index/home",
-    "pages/register/register",
-    "pages/login/login",
-    "pages/my/my",
-    "pages/myson/currency",
-    "pages/myson/lineInquiry",
-    "pages/myson/feedbackList",
-    "pages/myson/supplier_search",
-    "pages/myson/guestList",
-    "pages/myson/guest",
-    "pages/myson/recommend",
-    "pages/myson/change_pwd",
-    "pages/myson/modify_data",
-    "pages/order/order",
-    "pages/financial/financial",
-    "pages/line_atlas/line_atlas",
-    
-    "pages/line_details/line_details",
-    "pages/change_price/change_price",
-    "pages/modal/modal"
-     
-    
-
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#4D67EE",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "white",
-    "selectedColor": "#4D67EE"
- 
-
-  },
-  "tabBar": {
-      "color": "#777A7E",
-      "selectedColor": "#4D67EE",
-      "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/index/home",
-        "text": "首页",
-        "iconPath": "./images/home@2x.png",
-        "selectedIconPath": "./images/home_highlight@2x.png"
-      },
-      {
-        "pagePath": "pages/order/order",
-        "text": "订单",
-        "iconPath": "./images/order@2x.png",
-        "selectedIconPath": "./images/order_heighlight@2x.png"
-      },
-      {
-        "pagePath": "pages/financial/financial",
-        "text": "财务",
-        "iconPath": "./images/financial@2x.png",
-        "selectedIconPath": "./images/financial_highlight@2x.png"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "./images/my@2x.png",
-        "selectedIconPath": "./images/my_highlight@2x.png"
-      }
-    ]
-  }
+    "pages": [
+        "pages/financial/financial",
+        "pages/financialson/recharge_application",
+        "pages/financialson/recharge_record",
+        "pages/financialson/transaction_record",
+        "pages/financialson/contract_record",
+        "pages/financialson/present_application",
+        "pages/financialson/transaction_record",
+        "pages/register/register",
+        "pages/modal/modal",
+        "pages/index/home",
+        "pages/register/register",
+        "pages/login/login",
+        "pages/submit/submit",
+        "pages/my/my",
+        "pages/myson/currency",
+        "pages/myson/lineInquiry",
+        "pages/myson/feedbackList",
+        "pages/myson/supplier_search",
+        "pages/myson/guestList",
+        "pages/myson/guest",
+        "pages/myson/recommend",
+        "pages/myson/change_pwd",
+        "pages/myson/modify_data",
+        "pages/order/order",
+      
+        "pages/line_atlas/line_atlas",
+        "pages/line_details/line_details",
+        "pages/change_price/change_price"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#4D67EE",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white",
+        "selectedColor": "#4D67EE"
+    },
+    "tabBar": {
+        "color": "#777A7E",
+        "selectedColor": "#4D67EE",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/home",
+                "text": "首页",
+                "iconPath": "./images/home@2x.png",
+                "selectedIconPath": "./images/home_highlight@2x.png"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "text": "订单",
+                "iconPath": "./images/order@2x.png",
+                "selectedIconPath": "./images/order_heighlight@2x.png"
+            },
+            {
+                "pagePath": "pages/financial/financial",
+                "text": "财务",
+                "iconPath": "./images/financial@2x.png",
+                "selectedIconPath": "./images/financial_highlight@2x.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "./images/my@2x.png",
+                "selectedIconPath": "./images/my_highlight@2x.png"
+            }
+        ]
+    }
 }

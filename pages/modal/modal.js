@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      modal_style:true
   },
 
   /**
@@ -62,5 +62,9 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  closeModal:function(){
+      this.setData({ modal_style:false})
   }
 })

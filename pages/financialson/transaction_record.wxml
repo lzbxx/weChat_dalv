@@ -1,0 +1,60 @@
+<view class="transaction_record_item">
+    <view class="title">
+        <view>支付线路产品订单金额</view>
+        <view>
+          <text>2017-08-22</text>
+          <text style="margin-left:20rpx">19:20:44</text>
+        </view>
+    </view>
+
+    <view class="title detail">
+        <view>发生金额</view>
+        <view>
+          <text>￥-1999.00</text>
+        
+        </view>
+    </view>
+
+    <view class="title detail" style=" border-bottom:1rpx solid #EDEDED;">
+        <view>账户余额</view>
+        <view>
+          <text>￥4588.00</text>
+     
+        </view>
+    </view>
+     <view class="title detail" style="text-algin:left;line-height:60rpx;color:#AAAAAA">
+        交易号：149446567
+    </view>
+    
+</view>
+
+
+<view class="transaction_record_item">
+    <view class="title">
+        <view>支付线路产品订单金额</view>
+        <view>
+          <text>2017-08-22</text>
+          <text style="margin-left:20rpx">19:20:44</text>
+        </view>
+    </view>
+
+    <view class="title detail">
+        <view>发生金额</view>
+        <view>
+          <text>￥-1999.00</text>
+        
+        </view>
+    </view>
+
+    <view class="title detail" style=" border-bottom:1rpx solid #EDEDED;">
+        <view>账户余额</view>
+        <view>
+          <text>￥4588.00</text>
+     
+        </view>
+    </view>
+     <view class="title detail" style="text-algin:left;line-height:60rpx;color:#AAAAAA">
+        交易号：149446567
+    </view>
+    
+</view>

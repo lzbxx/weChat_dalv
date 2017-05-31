@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+  role:"游客",
+  username:"公积金",
+
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+   
   },
 
   /**
@@ -64,6 +67,12 @@ Page({
   onReachBottom: function () {
   
   },
+  toLogin:function(){
+      wx.navigateTo({
+          url: '../../pages/login/login'
+      })
+
+  },
 
   /**
    * 用户点击右上角分享
@@ -74,5 +83,6 @@ Page({
       desc: '最具人气的小程序开发联盟!',
       path: '/pages/line_details/line_details'
     }
-  }
+  },
+  
 })

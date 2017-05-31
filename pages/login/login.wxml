@@ -23,6 +23,9 @@
     </view>
 
     <view class="login_btn">登录</view>
-    <text>忘记密码？</text>
+    <view style="border:none" class="register">
+        <view>忘记密码？</view>
+        <view bindtap="toregister">注册登录</view>
+    </view>
 </view>
 

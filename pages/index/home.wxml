@@ -9,23 +9,47 @@
   </view>
 
   <view class="message">
+    <view class="message" wx:if="">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg" />
+            <view class="name">
+                <view>
+                {{username}}
+                <text>{{role}}</text>
+                </view>
 
-    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg"
-    />
-    <view class="name">
-      <view>
-        林秋月
-        <text>顾问</text>
-      </view>
+                <view>
+                积分:
+                <text>52555</text>分
+                </view>
+            </view>
 
-      <view>
-        积分:
-        <text>52555</text>分
-      </view>
+            <view   class="adviser">
+                <view style="font-size:26rpx;color:#fff">我的旅游顾问</view>
+                  <view class="adviser_img" >   
+                     <image src="{{adviser_img}}" style="height:76rpx;width:76rpx" />
+                   </view>
+                    <view class="adviser_text" style="text-aligin;center;color:white;font-size:30rpx">小狐狸</view>
+               
+            
+            </view>
+
+
+
+
+
+
+
+
+
+
 
 
     </view>
   </view>
+  <view class="message" wx:if="1" style=" justify-content: center">
+    <view class="btn" bindtap="toLogin">未登录</view>
+  </view>
+
 
 
 
@@ -34,7 +58,7 @@
 
 <view class="nav">
 
-  <view class="nav_list" >
+  <view class="nav_list">
     <image mode="scaleToFill" src="../../images/outbound_tourism@2x.png" />
     <view>
       出境游

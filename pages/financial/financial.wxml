@@ -20,7 +20,7 @@
 
 <view class="financial_fun">
    
-    <view wx:for="{{financial_fun}}">
+    <view wx:for="{{financial_fun}}" data-name="{{item.url}}" bindtap="toDetail">
         <view>
             <image src="{{item.img}}" />
             <view class="financial_money2">{{item.name}}</view>

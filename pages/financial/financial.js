@@ -5,15 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    financial_fun:[{img:"../../images/transaction_record@2x.png",name:"交易记录"},
-    {img:"../../images/recharge_application@2x.png",name:"充值申请"},
-    {img:"../../images/recharge_record@2x.png",name:"充值记录"},
-    {img:"../../images/present_application@2x.png",name:"提现申请"},
-    {img:"../../images/cash_register@2x.png",name:"提现记录"},
-    {img:"../../images/invoice_application@2x.png",name:"发票申请"},
-    {img:"../../images/invoice_record@2x.png",name:"发票记录"},
-    {img:"../../images/contract_application@2x.png",name:"合同申请"},
-    {img:"../../images/contract_record@2x.png",name:"合同记录"}
+      financial_fun: [{ img: "../../images/transaction_record@2x.png", name: "交易记录", url:"transaction_record"},
+          { img: "../../images/recharge_application@2x.png", name: "充值申请", url:"recharge_application"},
+          { img: "../../images/recharge_record@2x.png", name: "充值记录", url:"transaction_record"},
+          { img: "../../images/present_application@2x.png", name: "提现申请", url:"present_application"},
+          { img: "../../images/cash_register@2x.png", name: "提现记录", url:"cash_register"},
+          { img: "../../images/invoice_application@2x.png", name: "发票申请", url:"invoice_application"},
+          { img: "../../images/invoice_record@2x.png", name: "发票记录", url:"invoice_record"},
+          { img: "../../images/contract_application@2x.png", name: "合同申请", url:"contract_application"},
+          { img: "../../images/contract_record@2x.png", name: "合同记录", url:"contract_record"}
     
     ]
   },
@@ -72,5 +72,12 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  toDetail:function(e){
+      var a =e.currentTarget.dataset.name;
+      wx.navigateTo({
+          url: '../../pages/financialson/'+a,
+      })
+      
   }
 })

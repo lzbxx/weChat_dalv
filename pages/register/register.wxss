@@ -1,2 +1,17 @@
 /* pages/register/register.wxss */
+
 @import "../../pages/login/login.wxss";
+@import "../../pages/modal/modal.wxss";
+page{
+    overflow: hidden;
+}
+input{
+    width: 80%;
+}
+
+.picker{
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 100%;
+    z-index: 2000
+}

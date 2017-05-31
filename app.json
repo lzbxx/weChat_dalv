@@ -1,15 +1,10 @@
 {
     "pages": [
         "pages/financial/financial",
-
-"pages/financialson/contract_record",
-"pages/financialson/contract_application",
-"pages/financialson/invoice_record",
-"pages/financialson/invoice_application",
-
-
-
-
+        "pages/financialson/contract_record",
+        "pages/financialson/contract_application",
+        "pages/financialson/invoice_record",
+        "pages/financialson/invoice_application",
         "pages/financialson/cash_register",
         "pages/financialson/present_application",
         "pages/financialson/recharge_record",
@@ -18,7 +13,7 @@
         "pages/register/register",
         "pages/modal/modal",
         "pages/index/home",
-        "pages/register/register",
+     
         "pages/login/login",
         "pages/submit/submit",
         "pages/my/my",
@@ -32,7 +27,6 @@
         "pages/myson/change_pwd",
         "pages/myson/modify_data",
         "pages/order/order",
-      
         "pages/line_atlas/line_atlas",
         "pages/line_details/line_details",
         "pages/change_price/change_price"

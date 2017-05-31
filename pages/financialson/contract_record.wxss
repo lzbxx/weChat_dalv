@@ -1,1 +1,38 @@
 /* pages/financialson/contract_record.wxss */
+ .transaction_record_item{
+     height: 400rpx;
+     background: #fff;
+     margin-top: 12rpx
+ }
+ 
+ .title{
+ display: flex;
+ height: 90rpx;
+ border-bottom:1rpx solid #EDEDED;
+ font-size: 26rpx;
+ box-sizing: border-box;
+ padding: 10rpx 30rpx;
+ align-items: center;
+ 
+ 
+ }
+ .title view{
+     flex: 1
+ }
+ .title view:nth-last-child(1){
+     text-align: right
+ }
+ .title text{
+     height: 24rpx;
+     color: #AAAAAA
+ }
+ .detail{
+     height: 60rpx;
+     border: none;
+     margin-top: 0;
+     padding: 10rpx 30rpx;
+ }
+ .detail text{
+     color: #FF7335;
+     
+ }

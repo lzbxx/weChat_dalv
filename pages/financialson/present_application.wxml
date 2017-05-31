@@ -1,2 +1,29 @@
 <!--pages/financialson/present_application.wxml-->
 <text>pages/financialson/present_application.wxml</text>
+
+ <view class="present_item">
+ 
+ <view class="present_title">
+ 提现账号：<text>560099943</text>
+ 
+ </view>
+ 
+             <view class="present_body">
+                 <view><text>账户总额：</text>9978.00</view>
+               <view><text>当前余额：</text>9978.00</view>  
+             </view>
+ 
+ 
+ </view>
+ 
+ 
+ <view class="money">
+    <view >提现金额：</view>
+    <input type="number" style="width：80%" placeholder-style="color:#C7C7C7" placeholder="请输入转出金额"  />
+    
+ </view>
+ 
+ 
+ <view class="btn">
+     <button >提交申请</button>
+ </view> 

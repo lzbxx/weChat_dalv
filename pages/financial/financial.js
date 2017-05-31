@@ -7,7 +7,7 @@ Page({
   data: {
       financial_fun: [{ img: "../../images/transaction_record@2x.png", name: "交易记录", url:"transaction_record"},
           { img: "../../images/recharge_application@2x.png", name: "充值申请", url:"recharge_application"},
-          { img: "../../images/recharge_record@2x.png", name: "充值记录", url:"transaction_record"},
+          { img: "../../images/recharge_record@2x.png", name: "充值记录", url:"recharge_record"},
           { img: "../../images/present_application@2x.png", name: "提现申请", url:"present_application"},
           { img: "../../images/cash_register@2x.png", name: "提现记录", url:"cash_register"},
           { img: "../../images/invoice_application@2x.png", name: "发票申请", url:"invoice_application"},

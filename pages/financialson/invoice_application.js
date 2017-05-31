@@ -1,4 +1,4 @@
-// pages/financialson/recharge_record.js
+// pages/financialson/invoice_application.js
 Page({
 
   /**

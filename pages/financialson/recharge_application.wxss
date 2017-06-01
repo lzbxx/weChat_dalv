@@ -1,1 +1,111 @@
-/* pages/financialson/recharge_application.wxss */
+.body{
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    background: #F4F4F4;
+}
+.swiper-tab{  
+    width: 100%;  
+    font-size: 30rpx;
+    text-align: center;  
+    display: flex;
+    line-height: 80rpx;
+    }  
+view{
+    box-sizing: border-box;
+}
+.swiper-tab view{
+    flex: 1
+}
+.swiper-tab view:nth-of-type(1){
+    border-right: 1rpx solid #F4F4F4;
+}
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.wiper-box{ display: block; height: 100%; width: 100%; overflow: scroll; }  
+.swiper-box view{  
+    text-align: center;  
+}
+view{
+    background: #fff;
+    
+}
+.main{
+    background: #fff;
+}
+.item{
+    min-height: 100rpx;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 0rpx 30rpx;
+    position: relative;
+}
+.check{
+    display: flex;
+    align-items: center;
+    text-align: right;
+   
+}
+.check image{
+    height: 40rpx;
+    width: 40rpx;
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx
+}
+.money_number{
+    height: 100rpx;
+    display: flex;
+    margin-top: 20rpx;
+    align-items: center;
+    padding: 0rpx 30rpx;
+    text-align: left;
+    font-size: 30rpx;
+}
+
+.money_number{
+    height: 100rpx;
+    display: flex;
+    margin-top: 20rpx;
+    align-items: center;
+    padding: 0rpx 30rpx;
+    text-align: left;
+    font-size: 30rpx;
+}
+
+.money_number button{
+    width: 98%;
+    background: #4D67EE;
+    color: #fff;
+}
+
+.bank{
+   
+    background: #F4F4F4;
+    border: 20rpx solid #fff;
+    
+}
+
+.bank .msg{
+    font-size: 24rpx;
+    background: #F4F4F4;
+    text-align: left;
+    padding: 18rpx 16rpx;
+
+    
+
+}
+
+.bank .msg text{
+    color: #da7c0c;
+}
+.money_number view:nth-of-type(1){
+    width:100rpx
+}

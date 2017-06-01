@@ -1,2 +1,81 @@
 <!--pages/financialson/contract_application.wxml-->
-<text>pages/financialson/contract_application.wxml</text>
+<!--<text>pages/financialson/contract_application.wxml</text>-->
+<view class='panel'>
+
+
+  <view class='panel_body'>
+    <view>国内合同
+      <text style="font-size:20rpx;color:#FC5A2E">每份3元</text>
+    </view>
+    <view class="quantity">
+
+      <view data-role="adult" bindtap="reduce">
+        <image src="../../images/reduce@2x.png" />
+      </view>
+      <view class="active">
+        <input data-role="adult" bindblur="change" type="number" value="{{adult}}" />
+      </view>
+      <view data-role="adult" bindtap="add">
+        <image src="../../images/add@2x.png" />
+      </view>
+    </view>
+    <view>境外合同
+      <text style="font-size:20rpx;color:#FC5A2E">每份3元</text>
+    </view>
+    <view class="quantity">
+      <view data-role="adult" bindtap="reduce">
+        <image src="../../images/reduce@2x.png" />
+      </view>
+      <view class="active">
+        <input data-role="adult" bindblur="change" type="number" value="{{adult}}" />
+      </view>
+      <view data-role="adult" bindtap="add">
+        <image src="../../images/add@2x.png" />
+      </view>
+    </view>
+
+    <view>单项委托
+      <text style="font-size:20rpx;color:#FC5A2E">每份3元</text>
+    </view>
+    <view class="quantity">
+      <view data-role="adult" bindtap="reduce">
+        <image src="../../images/reduce@2x.png" />
+      </view>
+      <view class="active">
+        <input data-role="adult" bindblur="change" type="number" value="{{adult}}" />
+      </view>
+      <view data-role="adult" bindtap="add">
+        <image src="../../images/add@2x.png" />
+      </view>
+    </view>
+
+
+
+  </view>
+</view>
+<view style="padding:0rpx 30rpx;font-size:30rpx;margin-top:10rpx">索取方式</view>
+<view class="way">
+  <view class="contract_select">
+    <view class="classname">
+      <text>快递</text>
+      <image src="../../images/check@2x.png"></image>
+      <image src="../../images/Check_active@2x.png"></image>
+    </view>
+    <view class="classname">
+      <text>自取</text>
+      <image src="../../images/Check_active@2x.png"></image>
+      <image src="../../images/check@2x.png"></image>
+    </view>
+  </view>
+
+</view>
+
+<view class="address">
+<view >公司地址：北京时间爱上有点意思的士速递是滴是滴搜的是</view>
+<view >联系电话：909090909000909090909</view>
+
+
+</view>
+
+
+<button style="margin:20rpx 30rpx;background-color:#4D67EE;color:#fff">提交</button>

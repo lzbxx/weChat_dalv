@@ -1,18 +1,19 @@
 /* pages/financialson/transaction_record.wxss */
 .transaction_record_item{
-    height: 290rpx;
+
     background: #fff;
     margin-top: 12rpx
 }
 
 .title{
-display: flex;
-height: 90rpx;
-border-bottom:1rpx solid #EDEDED;
-font-size: 30rpx;
-box-sizing: border-box;
-padding: 0rpx 30rpx;
-align-items: center;
+    display: flex;
+    height: 80rpx;
+    border-bottom:1rpx solid #EDEDED;
+    font-size: 30rpx;
+    box-sizing: border-box;
+    padding: 0rpx 30rpx;
+    align-items: center;
+    background: #fff
 
 
 }
@@ -30,6 +31,7 @@ align-items: center;
     height: 70rpx;
     border: none;
     margin-top: 0;
+    font-size: 24rpx
 }
 .detail text{
     color: #FF7335;

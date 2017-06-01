@@ -1,1 +1,3 @@
 /* pages/financialson/cash_register.wxss */
+@import "../../pages/financialson/recharge_record.wxss";
+

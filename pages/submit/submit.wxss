@@ -75,7 +75,7 @@ page{
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
-    padding-left: 100rpx;
+    padding-left: 130rpx;
    
 }
 .panel .panel_body .quantity view {

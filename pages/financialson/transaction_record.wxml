@@ -53,7 +53,7 @@
      
         </view>
     </view>
-     <view class="title detail" style="text-algin:left;line-height:60rpx;color:#AAAAAA">
+     <view class="title detail" style="text-algin:left;line-height:60rpx;color:#AAAAAA;background:#fff">
         交易号：149446567
     </view>
     

@@ -1,2 +1,51 @@
 <!--pages/financialson/cash_register.wxml-->
 <text>pages/financialson/cash_register.wxml</text>
+<!--pages/financialson/recharge_record.wxml-->
+<text>pages/financialson/recharge_record.wxml</text>
+<view class="transaction_record_item">
+     <view class="title">
+         <view>充值</view>
+         <view>
+           <text>2017-08-22</text>
+           <text style="margin-left:20rpx">19:20:44</text>
+         </view>
+     </view>
+      <view class="title detail">
+         <view>状态</view>
+         <view>
+           <text style="color:#5FC82B">审核通过</text>
+         
+         </view>
+     </view>
+ 
+     <view class="title detail">
+         <view>充值金额</view>
+         <view>
+           <text>￥-1999.00</text>
+         
+         </view>
+     </view>
+ 
+     <view class="title detail" >
+         <view>系统使用费</view>
+         <view>
+           <text>0%</text>
+      
+         </view>
+     </view>
+    <view class="title detail" style=" border-bottom:1rpx solid #EDEDED;">
+         <view>实际到账</view>
+         <view>
+           <text>￥26666.00</text>
+         
+         </view>
+     </view>
+ 
+ 
+ 
+      <view class="title detail" style="text-algin:left;line-height:60rpx;color:#AAAAAA">
+         交易号：149446567
+     </view>
+     
+ </view>
+ 

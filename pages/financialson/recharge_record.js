@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    arr:[{img:"../../images/cash@2x.png",name:"现金充值",check:"../../images/check@2x.png"}]
   
   },
 

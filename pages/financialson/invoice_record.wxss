@@ -1,1 +1,2 @@
 /* pages/financialson/invoice_record.wxss */
+@import "../../pages/financialson/transaction_record.wxss";

@@ -1,66 +1,78 @@
-// pages/financialson/recharge_application.js
+var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
-  },
+    arr:[{img:"../../images/cash@2x.png",name:"现金充值"},
+        { img:"../../images/present_application@2x.png",name:"刷卡充值"},
+        { img:"../../images/cheque.png",name:"支票充值"},
+        { img:"../../images/bank@2x.png",name:"银行转账"}],
+        index:true,
+        index1: false,
+        index2: false,
+        index3: false,
+        index4: false,
+        index5: false,
+    
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+    /** 
+        * 页面配置 
+        */
+   
+    // tab切换  
+    currentTab: 0,
   },
+  onLoad: function () {
+    var that = this;
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+    /** 
+     * 获取系统信息 
+     */
+    wx.getSystemInfo({
+
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
+    });
   },
+  /** 
+     * 滑动切换tab 
+     */
+  bindChange: function (e) {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+    var that = this;
+    that.setData({ currentTab: e.detail.current});
+
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
   
+  swichNav: function (e) {
+
+    var that = this;
+
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
   },
+  select:function(e){
+      this.setData({
+          index: false,
+          index1: false,
+          index2: false,
+          index3: false,
+          index4: false,
+          index5: false,})
+      var index = e.currentTarget.dataset.index
+      this.setData({
+          [index]:true
+      })
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
+   }
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
-})
+}) 

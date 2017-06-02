@@ -1,3 +1,6 @@
+@import "src/wetoast.wxss";
+
+
 .ellipsis {
    	overflow: hidden;
     text-overflow: ellipsis;

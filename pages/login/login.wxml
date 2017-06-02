@@ -13,19 +13,21 @@
 
 <view class="form_content">
     <view>
-        <input placeholder="国内手机号"  maxlength="11" number />
-        <image style="height:40rpx;width:40rpx" src="../../images/close.png" />
+        <input placeholder="国内手机号"  data-role="phone"  bindinput="input" maxlength="11" type="number" value="{{phone}}"  />
+     
+        <image wx:if="{{phone}}"  data-role="phone" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
     </view>
 
     <view>
-        <input placeholder="登录密码"  maxlength="11" number />
-        <image style="height:40rpx;width:40rpx" src="../../images/close.png" />
+        <input placeholder="登录密码" data-role="password"  bindinput="input" type="password" value="{{password}}"  />
+       <image wx:if="{{password}}" data-role="password" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
     </view>
 
-    <view class="login_btn">登录</view>
+    <view class="login_btn" bindtap="login">登录</view>
     <view style="border:none" class="register">
         <view>忘记密码？</view>
         <view bindtap="toregister">注册登录</view>
     </view>
 </view>
 
+<include src="../../src/wetoast.wxml"/>

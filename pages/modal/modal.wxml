@@ -1,23 +1,14 @@
-<view class="wxapp-modal" wx:if="{{modal_style}}" >
-  <view class="content">
-    <view class="header">请输入城市名</view>
-    <view class="body" style="height:100rpx">
-      <input placeholder="点击输入城市名" />
+ <view class="wxapp-modal" wx:if="{{modal_style}}">
+    <view class="content">
+      <view class="header">请输入城市名</view>
+      <view class="body" style="height:100rpx">
+        <input bindinput="cityName" value="{{city}}" type="text" placeholder="点击输入城市名" />
+      </view>
+
+      <view class="footer ">
+        <button catchtouchstart="closeModal">取消</button>
+        <button catchtouchstart="closeKeep">确定</button>
+      </view>
     </view>
-
-    <view class="footer ">
-
-      <button>取消</button>
-        <button catchtouchstart="closeModal">确定</button>
-    </view>
-
-
-
+    <view class="mask" catchtouchstart="closeModal"></view>
   </view>
-
-
-
-
-
-  <view class="mask" catchtouchstart="closeModal"></view>
-</view>

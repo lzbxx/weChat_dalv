@@ -2,6 +2,7 @@
 
 @import "../../pages/login/login.wxss";
 @import "../../pages/modal/modal.wxss";
+
 page{
     overflow: hidden;
 }

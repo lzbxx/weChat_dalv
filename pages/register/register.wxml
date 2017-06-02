@@ -1,24 +1,24 @@
-<!--<view class="form_content" style="margin-top:100rpx">
+<view class="form_content" style="margin-top:100rpx">
   <view>
     <input data-role="name" bindinput="input" placeholder="输入姓名" maxlength="10" number value="{{name}}" />
-    <image  wx:if="{{name}}" data-role="name" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
+    <image wx:if="{{name}}" data-role="name" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
   </view>
 
   <view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker">
-       当前城市：{{array[index]}}
+      <view class="picker" style="display:flex">
+        当前城市：{{array[index]}}
       </view>
     </picker>
-  
+
   </view>
   <view>
-    <input  data-role="password" bindinput="input" placeholder="请输入密码"  type="password" value="{{password}}" />
+    <input data-role="password" bindinput="input" placeholder="请输入密码" type="password" value="{{password}}" />
     <image wx:if="{{password}}" data-role="password" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
   </view>
 
   <view>
-    <input   data-role="repassword" bindinput="input" placeholder="确认密码"  type="password"  value="{{repassword}}"/>
+    <input data-role="repassword" bindinput="input" placeholder="确认密码" type="password" value="{{repassword}}" />
     <image wx:if="{{repassword}}" data-role="repassword" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
   </view>
 
@@ -31,18 +31,19 @@
 
 
   <view style="display:flex;">
-    <input  data-role="phone" bindinput="input" placeholder="输入手机号" maxlength="11" number  value="{{phone}}"/>
+    <input data-role="phone" bindinput="input" placeholder="输入手机号" maxlength="11" number value="{{phone}}" />
     <button wx:if="{{btn1}}" style="width:30%;height:80rpx;margin-top:10rpx;line-height:80rpx;font-size:20rpx" bindtap="sentMessage">获取验证码</button>
     <button wx:if="{{btn2}}" style="height:80rpx;margin-top:10rpx;line-height:80rpx;font-size:20rpx">{{time}}s后重新获取</button>
   </view>
 
   <view>
-    <input data-role="identifyingCode" bindinput="input"   placeholder="输入验证码" maxlength="4" number value="{{identifyingCode}}"/>
-    <image wx:if="{{identifyingCode}}"  data-role="identifyingCode" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
+    <input data-role="identifyingCode" bindinput="input" placeholder="输入验证码" maxlength="4" number value="{{identifyingCode}}" />
+    <image wx:if="{{identifyingCode}}" data-role="identifyingCode" bindtap="clear" style="height:40rpx;width:40rpx" src="../../images/close.png" />
   </view>
 
   <view bindtap="confirm" class="login_btn">立即注册</view>
 
-</view>-->
-
-<include src="../../pages/modal/modal.wxml"/>
+</view>
+<view wx:if="{{modal_style}}" bindtap="modal">
+  <include src="../../pages/modal/modal.wxml" />
+</view>

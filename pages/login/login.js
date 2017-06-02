@@ -1,64 +1,59 @@
 // pages/lgin/login.js
+var App=getApp()
 Page({
+    data: {
+        phone:'',
+        password:''
+    },
+    onLoad: function (options) {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+    },
+    onReady: function () {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    },
+    onShow: function () {
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    },
+    onHide: function () {
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+    },
+    onUnload: function () {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+    },
+    onPullDownRefresh: function () {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+    },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
+    onReachBottom: function () {
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-  toregister:function(){
-      wx.navigateTo({
-          url: '../../pages/register/register',
-      })
-  }
+    },
+    toregister: function () {
+        wx.navigateTo({
+            url: '../../pages/register/register',
+        })
+    },
+    clear: function (e) {
+        console.log(e)
+        var role = e.currentTarget.dataset.role
+        this.setData({ [role]: '' })
+    },
+    input: function (e) {
+        // console.log(e)
+        console.log(this.data.phone)
+        this.setData({ [e.currentTarget.dataset.role]: e.detail.value })
+        
+    },
+    login:function(){
+        wx.request({
+            url: 'http://dalvuapi.dalvu.com/index.php/Api/login/agencyIndex',
+            data: {login_name : this.data.phone ,login_pwd : this.data.password},
+            method: 'POST',
+            success: function(res){
+             console.log(res)
+            }
+        })
+      
+        
+    }
+
 })

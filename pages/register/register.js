@@ -42,12 +42,14 @@ Page({
         wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/login/agencyVerificationCode',
             data: {
-                phone : this.data.phone
+                phone : 18310084054
             },
             method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-            // header: {}, // 设置请求的 header
+            header: {
+              'content-type': 'application/json'
+            },
             success: function(res){
-                console.log(res)
+                console.log(res.data)
             }
         })
 
@@ -65,7 +67,7 @@ Page({
                 clearInterval(timer)
             }
             time--;
-            console.log(time)
+           
             that.setData({ time: time })
         }, 1000)
     },

@@ -7,6 +7,7 @@ Page({
   data: {
   role:"游客",
   username:"公积金",
+  List:null
 
 
   },
@@ -15,18 +16,51 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    wx.showLoading({
+      title: '加载中',
+    })
+    var that = this;
+    wx.request({
+      url: 'http://dalvuapi.dalvu.com/index.php/Api/index/indexMod',
+      method:"POST",
+      success: function (res) {
+      
+        var columnList = res.data.columnList
+        that.setData({
+          columnList
+        })
+      }
+    });
+    wx.request({
+      url: 'http://dalvuapi.dalvu.com/index.php/Api/index/indexLineList',
+      method: "POST",
+      success: function (res) {
+        console.log(res.data.list)
+         var List = res.data.list;
+        
+         
+        that.setData({
+          List:List
+        });
+
+        wx.hideLoading()
+
+
+
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
-  skip:function(){
+  skip:function(e){
+    console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
-      url: '../../pages/line_details/line_details'
+      url: '../../pages/line_details/line_details?id='+e.currentTarget.dataset.id
     });
  
     
@@ -77,12 +111,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    return {
-      title: '微信小程序联盟',
-      desc: '最具人气的小程序开发联盟!',
-      path: '/pages/line_details/line_details'
-    }
-  },
+  // onShareAppMessage: function () {
+  //   return {
+  //     title: '大旅游',
+  //     desc: '',
+  //     path: '/pages/line_details/line_details'
+  //   }
+  // },
   
 })

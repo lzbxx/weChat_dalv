@@ -103,3 +103,27 @@ line-clamp: 3; 行数
     </view>
   </picker>
 </view>
+
+
+小程序POst请求有坑
+function json2Form(json) {  
+    var str = [];  
+    for(var p in json){  
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));  
+    }  
+    return str.join("&");  
+}  
+
+
+   wx.request({
+      url: 'http://dalvuapi.dalvu.com/index.php/Api/index/details',
+      method:"POST",
+      header:{
+         "Content-Type": "application/x-www-form-urlencoded",
+      },
+      data: Util.json2Form( {id:"4510"}),  
+      success: function (res) {
+      console.log(res)
+      }
+    });
+

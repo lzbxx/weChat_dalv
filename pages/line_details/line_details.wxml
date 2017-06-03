@@ -2,21 +2,16 @@
 
 	<swiper bindtap="to_atlas" indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="{{duration}}">
 		<block>
-			<swiper-item>
-				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
+			<swiper-item wx:for="{{data.picArr}}">
+				<image src="{{item}}" class="slide-image" />
 			</swiper-item>
-			<swiper-item>
-				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
-			</swiper-item>
-			<swiper-item>
-				<image src="http://joymepic.joyme.com/wiki/images/op/4/4e/%E5%86%A5%E7%8E%8B13.jpg?v/1/w/500/h/459/201506251526" class="slide-image" />
-			</swiper-item>
+
 		</block>
 	</swiper>
 
 	<view class="line_title">
 		<view >
-			世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放世界第三绝对是对生活的死哦的混合内合肥耦合和覅偶尔会肥哦解放
+			{{data.list.name}}
 		</view>
 		<view>
 			<image src="../../images/edit@2x.png" />
@@ -29,11 +24,11 @@
 
 	<view class="code">
 		<view style="text-align:left">代码：542685</view>
-		<view>供应商：金旅假期</view>
+		<view>供应商：{{data.list.provider_name}}</view>
 		<view style="text-align:right">联系人：不不不</view>
 	</view>
 	<view class="price">
-		<view style="color:#FE603B">￥<text>1699.0</text></view>
+		<view style="color:#FE603B">￥<text>{{data.list.min_price}}.0</text></view>
 		<view style="text-align:right">
 
 			<view bindtap="change_money" style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>

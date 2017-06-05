@@ -123,7 +123,7 @@
             <image src="../../images/brightened_dot@2x.png" />
           </view>
           <view style="padding-left:10rpx;width:90%">
-            <import src="../../wxParse/wxParse.wxml" /> 
+            <import src="../../wxParse/wxParse.wxml" />
 
             <template is="wxParse" data="{{wxParseData:article.nodes}}" />
 
@@ -140,8 +140,8 @@
         <view class="router">
           <text class="day">费用包含</text>
           <view class="router_message">
-          {{costStatement}}
-           <!--<import src="../../wxParse/wxParse.wxml" /> 
+            {{costStatement}}
+            <!--<import src="../../wxParse/wxParse.wxml" /> 
             <template is="wxParse" data="{{costStatement}}" />-->
           </view>
 
@@ -157,7 +157,7 @@
 
     <swiper-item>
       <view class="router" style="font-size:30rpx;margin:0 40rpx;height:80%">
-       {{notice}}
+        {{notice}}
       </view>
     </swiper-item>
 
@@ -170,25 +170,14 @@
   <view class="book" bindtap="book">
     立即预订
   </view>
-
-
   <view class="recommended">
     <image src="../../images/recommended_home@2x.png" /> 推到首页
   </view>
-
-
-
-
 </view>
-
-
-
-
-
-
 
 <view class="date">
 
+  <include src="../../pages/date/date.wxml" />
 
 
 

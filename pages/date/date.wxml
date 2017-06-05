@@ -1,0 +1,35 @@
+<view class="flex box box-tb box-align-center">
+  <view class="calendar pink-color box box-tb">
+    <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+      <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+        <view class="prev-handle box box-lr box-align-center box-pack-center">《</view>
+      </view>
+      <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+      <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+        <view class="next-handle box box-lr box-align-center box-pack-center">》</view>
+      </view>
+    </view>
+    <view class="weeks box box-lr box-pack-center box-align-center">
+      <view style="color:#818181;height:24rpx" class="flex week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+    </view>
+    <view class="days box box-lr box-wrap">
+      <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+      </view>
+      <view class="grid white-color box box-align-center box-pack-center"  wx:for="{{days}}" wx:key="{{index}}"  data-idx="{{index}}">
+        <view style="width:100%" class="day {{item.price_adult_list >= 5? 'border-radius pink-bg' : ''}} box-align-center box-pack-center">
+          <view  class=""> {{index+1}}</view>
+
+
+          <view wx:if="{{item.price_adult_list}}" style="color:#FE6643" class="small">
+            ￥{{ item.price_adult_list}}</view>
+
+
+          <view wx:if="{{item.price_adult_list}}" style="color:#ED391B" class="small">￥{{item.price_adult_agency}}</view>
+
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -98,7 +98,7 @@
           <view>
             <image src="../../images/have_dinner@2x.png" style="height:40rpx;width:40rpx;" />
             <text>用餐</text>
-           <text  style=" z-index:1000;padding:0 2rpx">{{item.din}}</text>
+            <text style=" z-index:1000;padding:0 2rpx">{{item.din}}</text>
             <!--<text wx:if="{{item.hotel!=''}}" style=" z-index:1000;padding:0 2rpx">{{item.din}}</text>
             <text wx:if="{{item.hotel==''}}" class="wu">无</text>-->
           </view>
@@ -122,23 +122,33 @@
           <view>
             <image src="../../images/brightened_dot@2x.png" />
           </view>
-          <view style="padding-left:10rpx;">{{brightened_dot}}</view>
+          <view style="padding-left:10rpx;width:90%">
+            <import src="../../wxParse/wxParse.wxml" /> 
+
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+
+          </view>
         </veiw>
 
-      
+
       </view>
     </swiper-item>
 
     <swiper-item>
-      <view>
+      <view style="height:100%;overflow:scroll">
         <view class="router">
           <text class="day">费用包含</text>
-          <view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+          <view class="router_message">
+          {{costStatement}}
+           <!--<import src="../../wxParse/wxParse.wxml" /> 
+            <template is="wxParse" data="{{costStatement}}" />-->
+          </view>
 
         </view>
         <view class="router">
           <text class="day" s="color:#FF4F26;border-color:#FF4F26">费用不包含</text>
-          <view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+          <view class="router_message">{{fee_exclude}}</view>
 
         </view>
 
@@ -146,8 +156,8 @@
     </swiper-item>
 
     <swiper-item>
-      <view class="router" style="font-size:30rpx;margin-top:40rpx">
-        健康的水平等级SOP绝对是判断 大家搜迫击炮倒计时 都是【id【斯达舒【的【id【死的【死的四道【is【我odufweiojfpdufopdj
+      <view class="router" style="font-size:30rpx;margin:0 40rpx;height:80%">
+       {{notice}}
       </view>
     </swiper-item>
 
@@ -165,6 +175,19 @@
   <view class="recommended">
     <image src="../../images/recommended_home@2x.png" /> 推到首页
   </view>
+
+
+
+
+</view>
+
+
+
+
+
+
+
+<view class="date">
 
 
 

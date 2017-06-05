@@ -1,4 +1,4 @@
-
+@import "../../wxParse/wxParse.wxss";
 
 page{
     background: #F3F3F3;
@@ -186,7 +186,7 @@ swiper image{
     width: 40rpx;
 }
 .my-swiper-item{
-    overflow: auto;
+    overflow: scroll;
 }
 
 .contact-way{

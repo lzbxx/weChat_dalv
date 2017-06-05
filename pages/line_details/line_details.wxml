@@ -1,191 +1,172 @@
 <view class="banner">
 
-	<swiper bindtap="to_atlas" indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="{{duration}}">
-		<block>
-			<swiper-item wx:for="{{data.picArr}}">
-				<image src="{{item}}" class="slide-image" />
-			</swiper-item>
+  <swiper bindtap="to_atlas" indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="300">
+    <block>
+      <swiper-item wx:for="{{data.picArr}}" wx:key="">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
 
-		</block>
-	</swiper>
+    </block>
+  </swiper>
 
-	<view class="line_title">
-		<view >
-			{{data.list.name}}
-		</view>
-		<view>
-			<image src="../../images/edit@2x.png" />
-			<view bindtap="change_title" style="text-algin:center;width:100%;font-size:26rpx;color:#FE603B;">
-				编辑
-			</view>
-		</view>
+  <view class="line_title">
+    <view>
+      {{data.list.name}}
+    </view>
+    <view>
+      <image src="../../images/edit@2x.png" />
+      <view bindtap="change_title" style="text-algin:center;width:100%;font-size:26rpx;color:#FE603B;">
+        编辑
+      </view>
+    </view>
 
-	</view>
+  </view>
 
-	<view class="code">
-		<view style="text-align:left">代码：542685</view>
-		<view>供应商：{{data.list.provider_name}}</view>
-		<view style="text-align:right">联系人：不不不</view>
-	</view>
-	<view class="price">
-		<view style="color:#FE603B">￥<text>{{data.list.min_price}}.0</text></view>
-		<view style="text-align:right">
+  <view class="code">
+    <view style="text-align:left">代码：10{{data.list.id}}</view>
+    <view>供应商：{{data.list.provider_name}}</view>
+    <view style="text-align:right">联系人：{{data.list.contact_person}}</view>
+  </view>
+  <view class="price">
+    <view style="color:#FE603B">￥
+      <text>{{data.list.min_price}}.0</text>
+    </view>
+    <view style="text-align:right">
 
-			<view bindtap="change_money" style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>
+      <view bindtap="change_money" style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>
 
-		</view>
-	</view>
+    </view>
+  </view>
 
 </view>
 <view class="schedule">
 
-	<image src="../../images/group_date_select@2x.png" style="height:60rpx;width:60rpx;align-self:flex-end" />
-	<view>出团日期</view>
-	<view>
-		<image src="../../images/arrowhead_left@2x.png" style="height:50rpx;width:50rpx;float:right; " />
-	</view>
+  <image src="../../images/group_date_select@2x.png" style="height:60rpx;width:60rpx;align-self:flex-end" />
+  <view>出团日期</view>
+  <view>
+    <image src="../../images/arrowhead_left@2x.png" style="height:50rpx;width:50rpx;float:right; " />
+  </view>
 
 </view>
 
 <view class="line_message">
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text style="color:#272822">北京</text>
-	</view>
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text>北京</text>
-	</view>
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text>北京</text>
-	</view>
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text>北京</text>
-	</view>
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text>北京</text>
-	</view>
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text>北京</text>
-	</view>
-	<view style="width:50%">
-		<image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
-		<text>北京</text>
-	</view>
+  <view style="width:50%">
+    <image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
+    <text style="color:#272822">{{data.list.departure}}</text>
+  </view>
+  <view style="width:50%">
+    <image src="../../images/destination@2x.png" style="height:50rpx;width:50rpx;" /> 目的地：
+    <text style="color:#272822">{{data.list.destinations}}</text>
+  </view>
+  <view style="width:50%">
+    <image src="../../images/departure_traffic@2x.png" style="height:50rpx;width:50rpx;" /> 出发交通：
+    <text style="color:#272822">{{data.list.traffic_go}}</text>
+  </view>
+  <view style="width:50%">
+    <image src="../../images/return_traffic@2x.png" style="height:50rpx;width:50rpx;" /> 返回交通：
+    <text style="color:#272822">{{data.list.traffic_back}}</text>
+  </view>
+  <view style="width:50%">
+    <image src="../../images/group_date@2x.png" style="height:50rpx;width:50rpx;" /> 行程天数：
+    <text style="color:#272822">{{data.list.totalDay}}天</text>
+  </view>
+
 </view>
 <view class="tap">
-	<view class="my-swiper-tab" style="display:flex">
-		<view class="my-swiper-tab-list {{currentTab==0 ? 'my-on' : ''}}" data-current="0" bindtap="swichNav">行程安排</view>
-		<view class="my-swiper-tab-list {{currentTab==1 ? 'my-on' : ''}}" data-current="1" bindtap="swichNav">产品亮点</view>
-		<view class="my-swiper-tab-list {{currentTab==2 ? 'my-on' : ''}}" data-current="2" bindtap="swichNav">费用说明</view>
-		<view class="my-swiper-tab-list {{currentTab==3 ? 'my-on' : ''}}" data-current="3" bindtap="swichNav">注意事项</view>
+  <view class="my-swiper-tab" style="display:flex">
+    <view class="my-swiper-tab-list {{currentTab==0 ? 'my-on' : ''}}" data-current="0" bindtap="swichNav">行程安排</view>
+    <view class="my-swiper-tab-list {{currentTab==1 ? 'my-on' : ''}}" data-current="1" bindtap="swichNav">产品亮点</view>
+    <view class="my-swiper-tab-list {{currentTab==2 ? 'my-on' : ''}}" data-current="2" bindtap="swichNav">费用说明</view>
+    <view class="my-swiper-tab-list {{currentTab==3 ? 'my-on' : ''}}" data-current="3" bindtap="swichNav">注意事项</view>
 
-	</view>
+  </view>
 
-	<swiper current="{{currentTab}}" class="my-swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
-		<!-- 我是哈哈 -->
-		<swiper-item class="my-swiper-item">
-			<view class="router">
-				<text class="day">第一天</text>
-				<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
-				<view class="have_dinner">
-					<view>
-						<image src="../../images/have_dinner@2x.png" style="" />
-						<text>用餐</text>
-						<text>自理</text>
-					</view>
-					<view>
-						<image src="../../images/hotel@2x.png" style="height:40rpx;width:40rpx;" />
-						<text>自理</text>
-						<text>无</text>
-					</view>
+  <swiper current="{{currentTab}}" class="my-swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <!-- 我是哈哈 -->
+    <swiper-item class="my-swiper-item">
+      <view class="router" wx:for="{{tour_description}}" wx:key="">
+        <text class="day">第{{index+1}}天</text>
+        <view class="router_message">{{item.description}}</view>
+        <view class="have_dinner">
+          <!--<view>
+            <image src="../../images/have_dinner@2x.png" style="height:40rpx;width:40rpx;" />
+            <text>用餐</text>
+            <text>
+              {{item.din}}
+            </text>
+          </view>-->
+          <view>
+            <image src="../../images/have_dinner@2x.png" style="height:40rpx;width:40rpx;" />
+            <text>用餐</text>
+           <text  style=" z-index:1000;padding:0 2rpx">{{item.din}}</text>
+            <!--<text wx:if="{{item.hotel!=''}}" style=" z-index:1000;padding:0 2rpx">{{item.din}}</text>
+            <text wx:if="{{item.hotel==''}}" class="wu">无</text>-->
+          </view>
 
-				</view>
-			</view>
+          <view>
+            <image src="../../images/hotel@2x.png" style="height:40rpx;width:40rpx;" />
+            <text>酒店</text>
+            <text>{{item.hotel}}</text>
+          </view>
 
-			<view class="router">
-				<text class="day">第一天</text>
-				<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
-				<view class="have_dinner">
-					<view>
-						<image src="../../images/have_dinner@2x.png" style="" />
-						<text>用餐</text>
-						<text>自理</text>
-					</view>
-					<view>
-						<image src="../../images/hotel@2x.png" style="height:40rpx;width:40rpx;" />
-						<text>自理</text>
-						<text>无</text>
-					</view>
+        </view>
+      </view>
 
-				</view>
-			</view>
 
-		</swiper-item>
 
-		<swiper-item>
-			<view style="box-sizing: border-box;padding: 0px 30rpx">
-				<veiw class="brightened_dot">
-					<view>
-						<image src="../../images/brightened_dot@2x.png" />
-					</view>
-					<view style="padding-left:10rpx;">问佛万将诶欧服亿欧元地方大富豪 就当减肥多或东 do佛的回复第佛号的的较丰厚的发货单发货的解放后ID合法地发挥度覅殴打后覅偶电话费封ID佛is发挥地方度覅of合适的话</view>
-				</veiw>
+    </swiper-item>
 
-				<veiw class="brightened_dot">
-					<view>
-						<image src="../../images/brightened_dot@2x.png" />
-					</view>
-					<view style="padding-left:10rpx;">问佛万将诶欧服亿欧元地方大富豪 就当减肥多或东 do佛的回复第佛号的的较丰厚的发货单发货的解放后ID合法地发挥度覅殴打后覅偶电话费封ID佛is发挥地方度覅of合适的话</view>
-				</veiw>
+    <swiper-item>
+      <view style="box-sizing: border-box;padding: 0px 30rpx">
+        <veiw class="brightened_dot">
+          <view>
+            <image src="../../images/brightened_dot@2x.png" />
+          </view>
+          <view style="padding-left:10rpx;">{{brightened_dot}}</view>
+        </veiw>
 
-			</view>
-		</swiper-item>
+      
+      </view>
+    </swiper-item>
 
-		<swiper-item>
-			<view>
-				<view class="router">
-					<text class="day">费用包含</text>
-					<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+    <swiper-item>
+      <view>
+        <view class="router">
+          <text class="day">费用包含</text>
+          <view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
 
-				</view>
-				<view class="router">
-					<text class="day" style="color:#FF4F26;border-color:#FF4F26">费用不包含</text>
-					<view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
+        </view>
+        <view class="router">
+          <text class="day" s="color:#FF4F26;border-color:#FF4F26">费用不包含</text>
+          <view class="router_message">地很丰富IDhi殴打汇丰银行if噢诶hi偶尔hi积极我积极我我我我i叽叽叽叽自己及啪啪啪</view>
 
-				</view>
+        </view>
 
-			</view>
-		</swiper-item>
+      </view>
+    </swiper-item>
 
-		<swiper-item>
-			<view class="router" style="font-size:30rpx;margin-top:40rpx">
-				健康的水平等级SOP绝对是判断 大家搜迫击炮倒计时 都是【id【斯达舒【的【id【死的【死的四道【is【我odufweiojfpdufopdj
-			</view>
-		</swiper-item>
+    <swiper-item>
+      <view class="router" style="font-size:30rpx;margin-top:40rpx">
+        健康的水平等级SOP绝对是判断 大家搜迫击炮倒计时 都是【id【斯达舒【的【id【死的【死的四道【is【我odufweiojfpdufopdj
+      </view>
+    </swiper-item>
 
-	</swiper>
+  </swiper>
 </view>
 
 <view class="contact-way">
-	<view class="phone"><image src="../../images/phone@2x.png"/>电话咨询</view>
-	<view class="book" bindtap="book">
-		立即预订
-	</view>
-	
-	
-	<view class="recommended">
-		<image src="../../images/recommended_home@2x.png"/>
-		推到首页
-	</view>
-	
+  <view class="phone">
+    <image src="../../images/phone@2x.png" />电话咨询</view>
+  <view class="book" bindtap="book">
+    立即预订
+  </view>
 
-	
+
+  <view class="recommended">
+    <image src="../../images/recommended_home@2x.png" /> 推到首页
+  </view>
+
+
+
 
 </view>
-
-	

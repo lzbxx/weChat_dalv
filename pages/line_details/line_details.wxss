@@ -159,6 +159,7 @@ swiper image{
     line-height: 60rpx;
     color: #E6E6E6;
     padding-left: 18rpx;
+    position: relative;
 }
 .router .have_dinner view image{
     height:40rpx;width:40rpx;vertical-align: middle;
@@ -166,7 +167,11 @@ swiper image{
 .router .have_dinner view text:nth-of-type(2){
     float: right;
     color: blueviolet;
-    margin-right: 10rpx;
+    transform: scale(0.9);
+    position: absolute;
+    right: 10rpx;
+    top: 0;
+    background: white;
 }
 .brightened_dot{
     display: flex;
@@ -245,3 +250,10 @@ swiper image{
 
 }
 
+p{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0
+
+}

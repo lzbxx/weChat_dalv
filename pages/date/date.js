@@ -1,6 +1,10 @@
-const conf = {
+
+const Util = require('../../utils/util.js');
+var list = []
+Page({
     data: {
-        hasEmptyGrid: false
+        hasEmptyGrid: false,
+        show:false
     },
     onLoad(options) {
         const date = new Date();
@@ -8,12 +12,13 @@ const conf = {
         const cur_month = date.getMonth() + 1;
         const weeks_ch = ['日', '一', '二', '三', '四', '五', '六'];
         this.calculateEmptyGrids(cur_year, cur_month);
-        this.calculateDays(cur_year, cur_month);
+        // this.calculateDays(cur_year, cur_month);
         this.setData({
             cur_year,
             cur_month,
-            weeks_ch
-        })
+            weeks_ch,
+            id:"4510"
+        })     
     },
     getThisMonthDays(year, month) {
         return new Date(year, month, 0).getDate();
@@ -41,91 +46,36 @@ const conf = {
     },
     calculateDays(year, month) {
         let days = [];
-        var list = [
-            {
-                "id": "100934",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-05",
-                "price_adult_agency": "1890.00"
+        var list = [];
+        var that = this
+        wx.request({
+            url: 'http://dalvuapi.dalvu.com/index.php/Api/index/details',
+            method: "POST",
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded",
             },
-            {
-                "id": "100933",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-04",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100932",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-03",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100931",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-02",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100930",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-01",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100929",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-29",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100928",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-28",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100919",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-27",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100927",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-26",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100926",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-25",
-                "price_adult_agency": "1850.00"
-            },
-            {
-                "id": "100920",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-06-22",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100921",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-06-21",
-                "price_adult_agency": "1590.00"
-            },
-            {
-                "id": "100924",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-06-20",
-                "price_adult_agency": "1890.00"
+            data: Util.json2Form({ id: 4510}),
+            success: function (res) {
+
+                // that.setData({
+                //     data: res.data,
+                //     tourSkuDate: res.data.tourSkuDate
+                // })
+
+                console.log(res)
+
             }
-        ]
+        });
+
+
+
+
+
+
 
         month = month > 9 ? month : "0" + month;
         var yue = year + "-" + month
         var arr = new Array()
-
         for (var j = 0; j < list.length; j++) {
             var a = list[j].start_time.slice(0, 7)
 
@@ -152,6 +102,26 @@ const conf = {
         });
         console.log(days)
     },
+    showfun(){
+        this.setData({
+            show:true
+        });
+        
+
+
+
+
+
+
+
+
+
+    },
+    hidefun(){
+        this.setData({
+            show: false
+        })
+    },
     handleCalendar(e) {
         const handle = e.currentTarget.dataset.handle;
         const cur_year = this.data.cur_year;
@@ -163,15 +133,12 @@ const conf = {
                 newYear = cur_year - 1;
                 newMonth = 12;
             }
-
             this.calculateDays(newYear, newMonth);
             this.calculateEmptyGrids(newYear, newMonth);
-
             this.setData({
                 cur_year: newYear,
                 cur_month: newMonth
             })
-
         } else {
             let newMonth = cur_month + 1;
             let newYear = cur_year;
@@ -196,6 +163,6 @@ const conf = {
             path: 'pages/index/index'
         }
     }
-};
-
-Page(conf);
+},
+    
+);

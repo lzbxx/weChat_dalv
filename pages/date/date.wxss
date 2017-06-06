@@ -1,49 +1,70 @@
-/* pages/calendar/calendar.wxss */
-.top-handle {
+/* pages/calendar/calendar.date .wxss */
+page{
+     height: 100%;
+     width: 100%;
+   
+}
+.date{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+}
+.date_item{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.date .top-handle {
     height: 80rpx;
 }
-.prev {
+.date .prev {
     text-align: right;
     height: 80rpx;
 }
-.next {
+.date .next {
     height: 80rpx;
 }
-.prev-handle {
+.date .prev-handle {
     width: 80rpx;
     height: 100%;
 }
-.next-handle {
+.date .next-handle {
     width: 80rpx;
     height: 100%;
 }
-.date-area {
+.date .date-area {
     width: 50%;
     height: 80rpx;
     text-align: center;
 }
-.weeks {
+.date .weeks {
     height: 50rpx;
     line-height: 50rpx;
     opacity: 0.5
 }
-.week {
+.date .week {
     text-align: center;
 }
-.days {
-    height: 500rpx;
+.date .days {
+height: 700rpx;
+    
 }
-.grid {
+.date .grid {
     width: 107.1428571429rpx;
 }
-.day {
+.date .day {
     width: 60rpx;
     height: 60rpx;
     color: #ccc;
     font-size: 26rpx;
     font-weight: 200;
 }
-.border-radius {
+.date .border-radius {
     /*height: 100%;*/
     position: relative;
     left: 0;
@@ -52,14 +73,14 @@
     font-size: 30rpx
   
 }
-/*.pink-bg {
+/*.date .pink-bg {
     background-color: #ff629a;
 }*/
-.purple-bg {
+.date .purple-bg {
     background-color: #b8b8f1;
 }
 
-.right-triangle::after {
+.date .right-triangle::after {
     content: "";
     display: block;
     width: 0;
@@ -70,7 +91,7 @@
     right: -22rpx;
     top: 18rpx;
 }
-.left-triangle::before {
+.date .left-triangle::before {
     content: "";
     display: block;
     width: 0;
@@ -81,85 +102,197 @@
     left: -22rpx;
     top: 18rpx;
 }
-.tips {
+.date .tips {
     text-align: center;
     margin-top: 20rpx;
     margin-bottom: 20rpx;
 }
-.types {
+.date .types {
     background-color: #ffedf4;
     height: 50rpx;
 }
-.type-dot {
+.date .type-dot {
     width: 25rpx;
     height: 25rpx;
     border-radius: 50%;
     margin-right: 10rpx;
 }
-.type-dot-ymq {
+.date .type-dot-ymq {
     color:rgb(255, 124, 160);
     background-color: rgb(255, 124, 160);
 }
-.type-dot-ycq {
+.date .type-dot-ycq {
     color: rgb(255, 200, 202);
     background-color: rgb(255, 200, 202);
 }
-.type-dot-aqq {
+.date .type-dot-aqq {
     color: rgb(118, 191, 92);
     background-color: rgb(118, 191, 92);
 }
-.type-dot-yyq {
+.date .type-dot-yyq {
     color: rgb(255, 182, 236);
     background-color: rgb(255, 182, 236);
 }
-.type-dot-plr {
+.date .type-dot-plr {
     color: rgb(211, 189, 215);
     background-color: rgb(211, 189, 215);
 }
-.types-desc {
+.date .types-desc {
     padding: 0 20rpx;
 }
-.type-name {
+.date .type-name {
     margin-top: 50rpx;
     margin-bottom: 30rpx;
 }
-.type-desc {
+.date .type-desc {
     padding: 0 35rpx;
     line-height: 38rpx;
 }
-.explain {
+.date .explain {
     border-top: 1px solid #eee;
     width: 90%;
     margin: 20rpx 5% 20rpx 5%;
     padding: 20rpx 0;
 }
-.explain-title {
+.date .explain-title {
     font-weight: bold;
     margin-bottom: 15rpx;
 }
-.explain-item {
+.date .explain-item {
     padding: 8rpx 20rpx;
     color: #fff;
 }
-.left-border-radius {
+.date .left-border-radius {
     border-top-left-radius: 20rpx;
     border-bottom-left-radius: 20rpx;
 }
-.right-border-radius {
+.date .right-border-radius {
     border-top-right-radius: 20rpx;
     border-bottom-right-radius: 20rpx;
 }
 view{
   text-align: center
 }
-.small{
-  transform: scale(0.85);
+.date .small{
+  transform: scale(0.date .85);
   width: 100%;
   text-align: center;
 }
-.color{
+.date .color{
     color:rebeccapurple
 }
-.color1{
+.date .color1{
     color: #ccc
+}
+
+.date .box {
+    display: flex;
+}
+
+.date .box-lr {
+    flex-direction: row;
+}
+
+.date .box-rl {
+    flex-direction: row-reverse;
+}
+
+.date .box-tb {
+    flex-direction: column;
+    background: #fff
+}
+
+.date .box-bt {
+    flex-direction: column-reverse;
+}
+
+.date .box-pack-center {
+    justify-content: center;
+}
+
+.date .box-pack-start {
+    justify-content: flex-start;
+}
+
+.date .box-pack-end {
+    justify-content: flex-end;
+}
+
+.date .box-pack-between {
+    justify-content: space-between;
+}
+
+.date .box-pack-around {
+    justify-content: space-around;
+}
+
+.date .box-align-center {
+    align-items: center;
+}
+
+.date .box-align-start {
+    align-items: flex-start;
+}
+
+.date .box-align-end {
+    align-items: flex-end;
+}
+
+.date .self-align-center {
+    align-self: center;
+    margin: 0 auto;
+}
+
+.date .self-align-start {
+    align-self: flex-start;
+}
+
+.date .self-align-end {
+    align-self: flex-end;
+}
+
+.date .self-align-stretch {
+    align-self: stretch;
+}
+
+.date .box-wrap {
+    flex-wrap: wrap;
+    background: #fff
+}
+
+.date .box-nowrap {
+    flex-wrap: nowrap;
+}
+
+.date .flex {
+    flex-grow: 1;
+}
+
+.date .shrink {
+    flex-shrink: 1;
+}
+.date .bg {
+  background-image: linear-gradient(to bottom, #faefe7, #ffcbd7);
+  overflow: hidden;
+}
+.date .brown-color {
+  color: #784344;
+}
+.date .pink-color {
+  color: #ff629a;
+}
+.date .white-color {
+  color: #fff;
+}
+.date .fs24 {
+  font-size: 24rpx;
+}
+.date .fs28 {
+  font-size: 28rpx;
+}
+.date .fs32 {
+  font-size: 32rpx;
+}
+.date .fs36 {
+  font-size: 36rpx;
 }

@@ -1,18 +1,41 @@
 var app = getApp();
 var WxParse = require('../../wxParse/wxParse.js');
 const Util = require('../../utils/util.js');
+//  var list = []
+// const conf = require('../../pages/date/date.js');
 Page({
     data: {
         winWidth: 0,
         winHeight: 0,
-        // tab切换  
         currentTab: 0,
-        data: null
+        data: null,
+        hasEmptyGrid: false,
+        tourSkuDate:[],
+        showDate:false
+    },
+    change_money: function () {
+        wx.navigateTo({
+            url: '../../pages/change_price/change_price'
+        })
 
     },
+// 预订
+    book: function () {
+        var that = this;
+        wx.navigateTo({
+            url: '../../pages/submit/submit'
+        })
+    },
+    to_atlas: function () {
+        wx.navigateTo({
+            url: '../../pages/line_atlas/line_atlas'
+        })
+    },
+    // 当月天数
     getThisMonthDays(year, month) {
         return new Date(year, month, 0).getDate();
     },
+    // 判断前面有几个空格
     getFirstDayOfWeek(year, month) {
         return new Date(Date.UTC(year, month - 1, 1)).getDay();
     },
@@ -33,119 +56,6 @@ Page({
                 empytGrids: []
             });
         }
-    },
-    calculateDays(year, month) {
-        let days = [];
-        var list = [
-            {
-                "id": "100934",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-05",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100933",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-04",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100932",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-03",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100931",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-02",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100930",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-08-01",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100929",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-29",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100928",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-28",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100919",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-27",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100927",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-26",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100926",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-07-25",
-                "price_adult_agency": "1850.00"
-            },
-            {
-                "id": "100920",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-06-22",
-                "price_adult_agency": "1890.00"
-            },
-            {
-                "id": "100921",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-06-21",
-                "price_adult_agency": "1590.00"
-            },
-            {
-                "id": "100924",
-                "price_adult_list": "2190.00",
-                "start_time": "2017-06-20",
-                "price_adult_agency": "1890.00"
-            }
-        ]
-
-        month = month > 9 ? month : "0" + month;
-        var yue = year + "-" + month
-        var arr = new Array()
-
-        for (var j = 0; j < list.length; j++) {
-            var a = list[j].start_time.slice(0, 7)
-
-            if (yue == a) {
-                arr.push(list[j])
-            }
-        }
-        const thisMonthDays = this.getThisMonthDays(year, month);
-
-        for (let i = 1; i <= thisMonthDays; i++) {
-            days.push({ day: i });
-        }
-        for (var k = 0; k < arr.length; k++) {
-            var number = parseInt(arr[k].start_time.slice(8, 10)) - 1;
-            var price_adult_list = arr[k].price_adult_list.substring(0, arr[k].price_adult_list.length - 3)
-            var price_adult_agency = arr[k].price_adult_agency.substring(0, arr[k].price_adult_agency.length - 3)
-
-            days[number] = { price_adult_list: price_adult_list, price_adult_agency: price_adult_agency }
-
-        }
-
-        this.setData({
-            days
-        });
-        console.log(days)
     },
     handleCalendar(e) {
         const handle = e.currentTarget.dataset.handle;
@@ -174,7 +84,6 @@ Page({
                 newYear = cur_year + 1;
                 newMonth = 1;
             }
-
             this.calculateDays(newYear, newMonth);
             this.calculateEmptyGrids(newYear, newMonth);
 
@@ -184,45 +93,30 @@ Page({
             })
         }
     },
-    change_money: function () {
-        wx.navigateTo({
-            url: '../../pages/change_price/change_price'
-        })
-
-    },
-    book: function () {
-        var that = this;
-        wx.navigateTo({
-            url: '../../pages/submit/submit'
-        })
-    },
-    to_atlas: function () {
-        wx.navigateTo({
-            url: '../../pages/line_atlas/line_atlas'
-        })
-    },
     onLoad: function (options) {
         const date = new Date();
         const cur_year = date.getFullYear();
         const cur_month = date.getMonth() + 1;
         const weeks_ch = ['日', '一', '二', '三', '四', '五', '六'];
         this.calculateEmptyGrids(cur_year, cur_month);
-        this.calculateDays(cur_year, cur_month);
+      
         this.setData({
             cur_year,
             cur_month,
-            weeks_ch
+            weeks_ch,
+            
         })
-
 
         var that = this;
         wx.showLoading({
             title: '加载中...',
         })
 
-        console.log("传输的参数是：" + options.id);
+        // console.log("传输的参数是：" + options.id);
+        
 
 
+// 线路信息
         wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/index/details',
             method: "POST",
@@ -231,11 +125,13 @@ Page({
             },
             data: Util.json2Form({ id: options.id }),
             success: function (res) {
-                // console.log(res);
+                that.calculateDays(that.data.cur_year, that.data.cur_month);
                 that.setData({
-                    data: res.data
+                    data: res.data,
+                    tourSkuDate: res.data.tourSkuDate
                 })
 
+                // console.log(res.data)
 
             }
         });
@@ -249,18 +145,16 @@ Page({
             data: Util.json2Form({ id: options.id }),
             success: function (res) {
                 var tour_description = res.data.tour_description
+               
                 Util.dinner(tour_description)
                 that.setData({
                     tour_description
                 })
-                wx.hideLoading()
+                wx.hideLoading();
+               
             }
         });
         // var article = null;
-
-
-
-
         // wx.request({
         //     url: 'http://dalvuapi.dalvu.com/index.php/Api/index/detailsEdge',
         //     method: "POST",
@@ -273,8 +167,6 @@ Page({
         //         WxParse.wxParse('article', 'html', article, that, 5);
         //     }
         // });
-
-
         wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/index/detailsCostExplain',
             method: "POST",
@@ -290,7 +182,6 @@ Page({
                 costStatement = costStatement.replace(/<\/?[^>]*>/g, "");
                 costStatement = costStatement.replace(/\s*/g, "");
                 costStatement = costStatement.replace(/&nbsp;/g, "");
-
                 var fee_exclude = res.data.list.fee_exclude;
                 fee_exclude = fee_exclude.replace(/(\n)/g, "");
                 fee_exclude = fee_exclude.replace(/(\t)/g, "");
@@ -303,9 +194,9 @@ Page({
                     fee_exclude
 
                 });
-               
+
             }
-            });
+        });
         wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/index/detailsNotice',
             method: "POST",
@@ -324,28 +215,24 @@ Page({
                 that.setData({
                     notice
                 });
-                console.log(res)
+                // console.log(res)
             }
         });
         wx.getSystemInfo({
-
             success: function (res) {
                 that.setData({
                     winWidth: res.windowWidth,
                     winHeight: res.windowHeight
                 });
             }
-
         });
     },
     /** 
        * 滑动切换tab 
        */
     bindChange: function (e) {
-
         var that = this;
         that.setData({ currentTab: e.detail.current });
-
     },
     /** 
      * 点击tab切换 
@@ -361,5 +248,41 @@ Page({
                 currentTab: e.target.dataset.current
             })
         }
+    },
+    calculateDays(year, month) {
+        let days = [];
+        var list = this.data.tourSkuDate
+        month = month > 9 ? month : "0" + month;
+        var yue = year + "-" + month
+        var arr = new Array()
+        for (var j = 0; j < list.length; j++) {
+            var a = list[j].start_time.slice(0, 7)
+            if (yue == a) {
+                arr.push(list[j])
+            }
+        }
+        const thisMonthDays = this.getThisMonthDays(year, month);
+        for (let i = 1; i <= thisMonthDays; i++) {
+            days.push({ day: i });
+        }
+        for (var k = 0; k < arr.length; k++) {
+            var number = parseInt(arr[k].start_time.slice(8, 10)) - 1;
+            var price_adult_list = arr[k].price_adult_list.substring(0, arr[k].price_adult_list.length - 3)
+            var price_adult_agency = arr[k].price_adult_agency.substring(0, arr[k].price_adult_agency.length - 3)
+
+            days[number] = { price_adult_list: price_adult_list, price_adult_agency: price_adult_agency }
+        }
+        this.setData({
+            days
+        });
+    },
+    show:function(){
+        this.setData({
+            showDate:true,
+        });
+
+        
+       
     }
-})  
+})
+

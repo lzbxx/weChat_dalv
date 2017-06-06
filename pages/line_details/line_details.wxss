@@ -252,3 +252,4 @@ swiper image{
 
 
 /* pages/calendar/calendar.wxss */
+@import "../../pages/date/date.wxss"

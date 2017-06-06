@@ -1,5 +1,4 @@
 <view class="banner">
-
   <swiper bindtap="to_atlas" indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="300">
     <block>
       <swiper-item wx:for="{{data.picArr}}" wx:key="">
@@ -8,7 +7,6 @@
 
     </block>
   </swiper>
-
   <view class="line_title">
     <view>
       {{data.list.name}}
@@ -19,9 +17,7 @@
         编辑
       </view>
     </view>
-
   </view>
-
   <view class="code">
     <view style="text-align:left">代码：10{{data.list.id}}</view>
     <view>供应商：{{data.list.provider_name}}</view>
@@ -34,21 +30,17 @@
     <view style="text-align:right">
 
       <view bindtap="change_money" style="height:40rpx;font-size:22rpx;border:1rpx solid #ccc ;width:100rpx;text-align:center;line-height:40rpx;float:right">改价</view>
-
     </view>
   </view>
 
 </view>
-<view class="schedule">
-
+<view class="schedule" bindtap="show">
   <image src="../../images/group_date_select@2x.png" style="height:60rpx;width:60rpx;align-self:flex-end" />
   <view>出团日期</view>
   <view>
     <image src="../../images/arrowhead_left@2x.png" style="height:50rpx;width:50rpx;float:right; " />
   </view>
-
 </view>
-
 <view class="line_message">
   <view style="width:50%">
     <image src="../../images/departure_city@2x.png" style="height:50rpx;width:50rpx;" /> 出发城市：
@@ -175,10 +167,6 @@
   </view>
 </view>
 
-<view class="date">
-
+<view wx:if="{{showDate}}" >
   <include src="../../pages/date/date.wxml" />
-
-
-
 </view>

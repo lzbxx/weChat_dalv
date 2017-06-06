@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/home",
+        "pages/selectidentity/selectidentity",
         "pages/date/date",
         "pages/line_details/line_details",
         "pages/financial/financial",

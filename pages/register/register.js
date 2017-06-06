@@ -1,9 +1,10 @@
 // pages/register/register.js
+const Util = require('../../utils/util.js');
 Page({
 
     data: {
         name: '',
-        city:'',
+        city: '',
         array: ["北京", "唐山", "石家庄", "天津", "其他"],
         password: '',
         repassword: '',
@@ -29,7 +30,7 @@ Page({
         // console.log('picker发送选择改变，携带值为', e.detail.value)
         if (e.detail.value == 4) {
             this.setData({
-                modal_style:true
+                modal_style: true
             })
         }
         this.setData({
@@ -38,20 +39,28 @@ Page({
         console.log(this.data.index)
     },
     sentMessage: function () {
-            
         wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/login/agencyVerificationCode',
-            data: {
-                phone : 18310084054
-            },
-            method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            method: "POST",
             header: {
-              'content-type': 'application/json'
+                "Content-Type": "application/x-www-form-urlencoded",
             },
-            success: function(res){
-                console.log(res.data)
+            data: Util.json2Form({ phone: "18310084054" }),
+            success: function (res) {
+
+
+                console.log(res)
+
             }
-        })
+        });
+
+
+
+
+
+
+
+
 
 
 
@@ -67,7 +76,7 @@ Page({
                 clearInterval(timer)
             }
             time--;
-           
+
             that.setData({ time: time })
         }, 1000)
     },
@@ -82,51 +91,45 @@ Page({
 
     },
     confirm: function () {
-        // var that = this;
-        // if (!((this.data.name).length > 0)) {
-        //     wx.showModal({
-        //         title: '提示',
-        //         content: '用户名不能为空，请重新输入',
-        //     })
-        //     return false;
-        // }
-        // if (!(this.data.password == this.data.repassword & /[a-zA-Z0-9_]{6,16}/.test(this.data.password) & /[a-zA-Z0-9_]{6,16}/.test(this.data.repassword))) {
-        //     wx.showModal({
-        //         title: '提示',
-        //         content: '请检查两次密码是否一致！长度大于6',
-        //     });
-        //     return false;
-        // }
+        var that = this;
+        if (!((this.data.name).length > 0)) {
+            wx.showModal({
+                title: '提示',
+                content: '用户名不能为空，请重新输入',
+            })
+            return false;
+        }
+        if (!(this.data.password == this.data.repassword & /[a-zA-Z0-9_]{6,16}/.test(this.data.password) & /[a-zA-Z0-9_]{6,16}/.test(this.data.repassword))) {
+            wx.showModal({
+                title: '提示',
+                content: '请检查两次密码是否一致！长度大于6',
+            });
+            return false;
+        }
 
-        // if (!/^1[0-9]{10}$/.test(this.data.phone)) {
+        if (!/^1[0-9]{10}$/.test(this.data.phone)) {
 
-        //     wx.showModal({
-        //         title: '提示',
-        //         content: '请检查两次密码是否一致！长度大于6',
-        //     })
-        //     return false;
+            wx.showModal({
+                title: '提示',
+                content: '请检查两次密码是否一致！长度大于6',
+            })
+            return false;
 
-        // }
-        // if (!/^[0-9]{4}$/.test(this.data.phone)) {
+        }
+        if (!/^[0-9]{4}$/.test(this.data.phone)) {
 
-        //     wx.showModal({
-        //         title: '验提示',
-        //         content: '验证码格式不正确，请保证4位数字',
-        //     })
-        //     return false;
-        // }
-        
-
-
-
-
-
+            wx.showModal({
+                title: '验提示',
+                content: '验证码格式不正确，请保证4位数字',
+            })
+            return false;
+        }
     },
-    closeModal:function(){
-        this.setData({ modal_style: false})
+    closeModal: function () {
+        this.setData({ modal_style: false })
     },
 
-    closeKeep:function(){
+    closeKeep: function () {
         var arr = ["北京", "唐山", "石家庄", "天津"]
         arr.push(this.data.city)
         console.log(this.data.city)
@@ -137,8 +140,8 @@ Page({
         this.setData({ modal_style: false })
     },
 
-    cityName:function(e){
-        this.setData({ city: e.detail.value})
+    cityName: function (e) {
+        this.setData({ city: e.detail.value })
 
     }
 

@@ -1,0 +1,7 @@
+<view class="main">
+
+    <image style="height:136rpx;width:326rpx;margin-top:280rpx;margin-bottom:190rpx" src="../../images/logo.png" />
+    <button bindtap="consumer">我是用户</button>
+    <button bindtap="adviser" >我是顾问</button>
+   <text > 选择注册身份</text>
+</view>

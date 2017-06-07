@@ -1,9 +1,10 @@
 // pages/lgin/login.js
-var App=getApp()
+var App = getApp();
+const Util = require('../../utils/util.js');
 Page({
     data: {
-        phone:'',
-        password:''
+        phone: '',
+        password: ''
     },
     onLoad: function (options) {
 
@@ -29,7 +30,7 @@ Page({
     },
     toregister: function () {
         wx.navigateTo({
-            url: '../../pages/register/register',
+            url: '../../pages/selectidentity/selectidentity',
         })
     },
     clear: function (e) {
@@ -41,19 +42,26 @@ Page({
         // console.log(e)
         console.log(this.data.phone)
         this.setData({ [e.currentTarget.dataset.role]: e.detail.value })
-        
+
     },
-    login:function(){
-        wx.request({
+    login: function () {
+     wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/login/agencyIndex',
-            data: {login_name : this.data.phone ,login_pwd : this.data.password},
-            method: 'POST',
-            success: function(res){
-             console.log(res)
+            method: "POST",
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            data: Util.json2Form({login_name:"13126997216", login_pwd:"123456" }),
+            success: function (res) {
+                console.log(res)
+
+
+                // console.log(res.data)
+
             }
-        })
-      
-        
+        });
+
+
     }
 
 })

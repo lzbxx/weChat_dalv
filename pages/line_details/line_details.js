@@ -106,7 +106,6 @@ Page({
             weeks_ch,
             
         })
-
         var that = this;
         wx.showLoading({
             title: '加载中...',

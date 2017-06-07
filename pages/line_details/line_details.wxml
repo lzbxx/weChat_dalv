@@ -25,7 +25,7 @@
   </view>
   <view class="price">
     <view style="color:#FE603B">￥
-      <text>{{data.list.min_price}}.0</text>
+      <text>{{data.list.min_price/100}}.0</text>
     </view>
     <view style="text-align:right">
 

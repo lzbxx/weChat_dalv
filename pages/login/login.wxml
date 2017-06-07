@@ -30,4 +30,4 @@
     </view>
 </view>
 
-<include src="../../src/wetoast.wxml"/>
+<!--<include src="../../src/wetoast.wxml"/-->

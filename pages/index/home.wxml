@@ -70,7 +70,7 @@
       </view>
       <view class="price_destination">
         <view>{{item.departure}}</view>
-        <view>￥{{item.min_price}}</view>
+        <view>￥{{item.min_price/100}}</view>
       </view>
 
     </view>

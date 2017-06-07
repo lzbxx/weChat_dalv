@@ -1,11 +1,13 @@
 {
     "pages": [
+        "pages/indexson/indexson",
         "pages/index/home",
+        "pages/userLogin/userLogin",
+        "pages/register/register",
         "pages/selectidentity/selectidentity",
         "pages/date/date",
         "pages/line_details/line_details",
         "pages/financial/financial",
-        "pages/register/register",
         "pages/login/login",
         "pages/financialson/contract_application",
         "pages/financialson/recharge_application",

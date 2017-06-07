@@ -170,7 +170,7 @@ height: 700rpx;
     border-top-right-radius: 20rpx;
     border-bottom-right-radius: 20rpx;
 }
-view{
+.date view{
   text-align: center
 }
 .date .small{

@@ -1,0 +1,2 @@
+/* pages/indexson/indexson.wxss */
+@import "../../pages/line_details/line_details.wxss"

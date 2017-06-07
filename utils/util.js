@@ -44,6 +44,7 @@ function parseHtml(brightened_dot){
     return brightened_dot;
 }
 
+
 module.exports = {
     json2Form: json2Form,
     formatTime: formatTime,

@@ -9,7 +9,7 @@
   </view>
 
   <view class="message">
-    <view class="message" wx:if="">
+    <view class="message" wx:if="{{user}}">
       <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg" />
       <view class="name">
         <view>
@@ -23,19 +23,20 @@
         </view>
       </view>
 
-      <view class="adviser">
+      <view class="adviser" wx:if="{{adviser}}">
         <view style="font-size:26rpx;color:#fff">我的旅游顾问</view>
         <view class="adviser_img">
           <image src="{{adviser_img}}" style="height:76rpx;width:76rpx" />
         </view>
+        
         <view class="adviser_text" style="text-aligin;center;color:white;font-size:30rpx">小狐狸</view>
-
-
       </view>
-
     </view>
   </view>
-  <view class="message" wx:if="1" style=" justify-content: center">
+
+
+  
+  <view class="message" wx:if="{{login}}" style=" justify-content: center">
     <view class="btn" bindtap="toLogin">未登录</view>
   </view>
 
@@ -47,13 +48,12 @@
 
 <view class="nav">
 
-  <view class="nav_list" wx:for="{{columnList}}" wx:key="item">
+  <view class="nav_list" bindtap="toSon" data-url="{{item.url}}" wx:for="{{columnList}}" wx:key="item">
     <image mode="scaleToFill" src="{{item.pic_icon}}" />
     <view>
       {{item.name}}
     </view>
   </view>
-
 
 </view>
 
@@ -66,7 +66,7 @@
     <view data-id="{{item.id}}" class="list_item" bindtap="skip" wx:for="{{List}}" wx:key="">
       <image src="{{item.cover_pic}}" />
       <view class="ellipsis">
-       {{item.name}}
+        {{item.name}}
       </view>
       <view class="price_destination">
         <view>{{item.departure}}</view>
@@ -75,7 +75,7 @@
 
     </view>
 
- 
+
 
 
 

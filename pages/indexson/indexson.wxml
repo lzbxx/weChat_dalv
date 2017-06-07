@@ -1,3 +1,41 @@
-<view class="header">
+<view class="banner">
+  <swiper class="swiper-box " bindtap="to_atlas" indicator-dots="true" circular="true" indicator-active-color="#FE603B" autoplay="true" interval="2000" duration="300">
+    <block>
+      <swiper-item wx:for="items">
 
+        <image style="height:360rpx" src="http://pic1.win4000.com/wallpaper/5/553dc1e2be070.jpg" />
+
+      </swiper-item>
+
+    </block>
+    <view class="line_name .ellipsis">是近段时间来的好时机多喝水几点睡的进口税</view>
+  </swiper>
+
+  <view class="son_search">
+    <view class="input">
+      <input type="text" placeholder="支持模糊搜索：线路、景点、代码" />
+    </view>
+    <view class="son_search_btn">
+      <image style="height:40rpx;width:40rpx" src="../../images/search_son.png" />
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view style="text-align: center;height:60rpx;line-height:60rpx">
+    ——— 精选路线 ———
+  </view>
+
+  <view class="line_list">
+    <view data-id="{{item.id}}" class="list_item" bindtap="skip" wx:for="{{List}}" wx:key="">
+      <image src="{{item.cover_pic}}" />
+      <view class="ellipsis">
+        {{item.name}}
+      </view>
+      <view class="price_destination">
+        <view>{{item.departure}}</view>
+        <view>￥{{item.min_price/100}}</view>
+      </view>
+
+    </view>
+  </view>
 </view>

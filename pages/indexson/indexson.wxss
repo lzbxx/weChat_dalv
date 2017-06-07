@@ -1,2 +1,70 @@
 /* pages/indexson/indexson.wxss */
-@import "../../pages/line_details/line_details.wxss"
+@import "../../pages/line_details/line_details.wxss";
+
+.swiper-box {
+  position: relative;
+}
+
+.swiper-box {
+  height: 360rpx;
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+  float: right;
+  margin-left: 200rpx;
+}
+
+.banner {
+  height: 490rpx;
+  width: 100%;
+}
+
+.son_search {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  width: 90%;
+  box-sizing: border-box;
+  border: 2rpx solid #383c42;
+  height: 82rpx;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+}
+
+.son_search view {
+  height: 72rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.input {
+  flex: 5;
+  border-right: 1rpx solid #383c42;
+}
+
+.input input {
+  height: 80rpx;
+  padding-left: 30rpx;
+}
+
+.son_search_btn {
+  /*flex: 1;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120rpx;
+}
+
+.line_name {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 30rpx;
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx
+}

@@ -7,6 +7,17 @@ App({
         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));  
     }  
     return str.join("&");  
-}  
-
+    } ,
+    
+   getStorage:function(key){
+       wx.getStorageSync({
+           key: key,
+           success: function (res) {
+               key = res.data
+           },
+       })
+       return wx.getStorage
+   }
+    
+    
 })

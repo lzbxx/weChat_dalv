@@ -43,11 +43,25 @@ function parseHtml(brightened_dot){
     brightened_dot = brightened_dot.replace(/&nbsp;/g, ""); 
     return brightened_dot;
 }
-
+function getStorage(key){
+    var a;
+    wx.getStorage({
+        key: key,
+        success: function(res) {
+            a =res.data;
+            
+        },
+        complete:function(){
+            return a
+        }
+    })
+    
+}
 
 module.exports = {
     json2Form: json2Form,
     formatTime: formatTime,
     dinner:dinner,
-    parseHtml: parseHtml
+    parseHtml: parseHtml,
+    getStorage: getStorage
 }

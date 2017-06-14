@@ -10,10 +10,10 @@
 
   <view class="message">
     <view class="message" wx:if="{{user}}">
-      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495550180340&di=5d13cf5213b32aefc06f198e00a74ccb&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b79c65b03ac51f3deb58f650e.jpg" />
+      <image src="{{agencyInfo.head_pic}}" />
       <view class="name">
         <view>
-          {{username}}
+          {{agencyInfo.name}}
           <text>{{role}}</text>
         </view>
 
@@ -39,10 +39,6 @@
   <view class="message" wx:if="{{login}}" style=" justify-content: center">
     <view class="btn" bindtap="toLogin">未登录</view>
   </view>
-
-
-
-
 
 </view>
 

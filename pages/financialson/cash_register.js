@@ -1,17 +1,44 @@
 // pages/financialson/cash_register.js
+const Util = require("../../utils/util.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      state: { "1": "未审核", "2": "审核通过", "3": "审核失败", "5": "待支付", "6": "已支付" }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      var that = this;
+      var uid = wx.getStorageSync('Uid');
+      var token = wx.getStorageSync('sign_token');
+      wx.request({
+          url: 'http://dalvuapi.dalvu.com/index.php/Api/agencyFinance/topupList',
+          method: "POST",
+          header: {
+              "Content-Type": "application/x-www-form-urlencoded",
+          },
+          data: Util.json2Form({ uid: uid, sign_token: token, page: 1 }),
+          success: function (res) {
+              if (res.data.status == "00000") {
+                  that.setData({
+                      list: res.data.list
+                  })
+
+                  wx.setStorage({
+                      key: 'sign_token',
+                      data: res.data.sign_token,
+                  });
+
+                  console.log(res)
+              }
+
+          }
+      });
   
   },
 

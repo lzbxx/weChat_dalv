@@ -1,96 +1,123 @@
 <!--pages/financialson/invoice_application.wxml-->
 <text>pages/financialson/invoice_application.wxml</text>
 <view class="invoice_item">
-    <view class="invoice_item_title">发票抬头</view>
-    <view>
-        <input type="text" placeholder="请输入公司名"/>
-    </view>
+  <view class="invoice_item_title">发票抬头</view>
+  <view>
+    <input type="text" placeholder-style="font-size:30rpx" placeholder="请输入公司名" />
+  </view>
 </view>
 
 <view class="invoice_item">
-    <view class="invoice_item_title">发票抬头</view>
-    <view class="invoice_item_img">
-       <text>选择发票项目，团款</text>
-       
-    </view>
-    <image s src="../../images/arrowhead_left@2x.png" />
+  <view class="invoice_item_title">发票抬头</view>
+  <view class="invoice_item_img" style="font-sizea:30rpx">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{invoiceTypeList}}">
+      <view class="picker" style="width:400rpx;height:60rpx;font-size:30rpx;line-height:60rpx;color:#494949">
+       {{invoiceTypeList[index]}}
+      </view>
+    </picker>
+  </view>
+  <image s src="../../images/arrowhead_left@2x.png" />
 </view>
-
+<view class="invoice_item">
+  <view class="invoice_item_title" style="width:240rpx">纳税人识别号</view>
+  <view>
+    <input type="text" placeholder-style="font-size:30rpx" placeholder="请输入公司名" />
+  </view>
+</view>
 
 <view class="invoice_item" style="height:150rpx">
-    <view class="invoice_item_title">发票备注</view>
-    <view style="width:70%">
-       <textarea style="height:130rpx;width:100%" placeholder-style="font-size:30rpx" placeholder="请填写备注如代订机票，代订房费等" />
-    </view>
+  <view class="invoice_item_title">发票备注</view>
+  <view style="width:70%">
+    <textarea style="height:130rpx;width:100%" placeholder-style="font-size:30rpx" placeholder="请填写备注如代订机票，代订房费等" />
+  </view>
 </view>
 <view class="invoice_item" style="height:70rpx">
-    <view class="invoice_item_title" style="width:100%">剩余发票额度：<text style="color:#FF623D">9000元</text></view>
-   
+  <view class="invoice_item_title" style="width:100%">剩余发票额度：
+    <text style="color:#FF623D">{{dte.lastTotal/100}}元</text>
+  </view>
+
 </view>
 
 
 <view class="invoice_item" style="margin-top:20rpx">
-    <view class="invoice_item_title">发票金额</view>
-    <view>
-        <input type="text" placeholder="请输入发票金额"/>
-    </view>
+  <view class="invoice_item_title">发票金额</view>
+  <view>
+    <input type="text" placeholder="请输入发票金额" />
+  </view>
 </view>
 
 
 
 <view style="padding:0rpx 30rpx;font-size:30rpx;margin-top:10rpx;background:#F3F3F3">索取方式</view>
-  <view class="way">
-    <view class="contract_select">
-      <view class="classname">
-        <text>快递</text>
-        <image src="../../images/check@2x.png"></image>
-        <image src="../../images/Check_active@2x.png"></image>
-      </view>
-      <view class="classname">
-        <text>自取</text>
-        <image src="../../images/Check_active@2x.png"></image>
-        <image src="../../images/check@2x.png"></image>
-      </view>
+<view class="way">
+  <view class="contract_select">
+    <view class="classname" data-way="fast" bindtap="select">
+      <text>快递</text>
+      <image wx:if="{{!index1}}" src="../../images/check@2x.png"></image>
+      <image wx:if="{{index1}}" src="../../images/Check_active@2x.png"></image>
     </view>
+    <view class="classname" data-way="invite" bindtap="select">
+      <text>自取</text>
+      <image wx:if="{{!index2}}" src="../../images/check@2x.png"></image>
+      <image wx:if="{{index2}}" src="../../images/Check_active@2x.png"></image>
+    </view>
+  </view>
 </view>
 
-<view style="padding:0rpx 30rpx;font-size:30rpx;margin-top:10rpx;background:#F3F3F3">快递选择</view>
-  <view class="way">
-    <view class="contract_select">
-      <view class="classname">
-        <text>到付</text>
-        <image src="../../images/check@2x.png"></image>
-        <image src="../../images/Check_active@2x.png"></image>
-      </view>
-      <view class="classname">
-        <text>邮寄</text>
-        <image src="../../images/Check_active@2x.png"></image>
-        <image src="../../images/check@2x.png"></image>
-      </view>
+<view wx:if="{{index1}}" style="padding:0rpx 30rpx;font-size:30rpx;margin-top:10rpx;background:#F3F3F3">快递选择</view>
+<view class="way" wx:if="{{index1}}">
+  <view class="contract_select">
+    <view class="classname" data-way="freightAtDestination" bindtap="select">
+      <text>到付</text>
+      <image wx:if="{{!index3}}" src="../../images/check@2x.png"></image>
+      <image wx:if="{{index3}}" src="../../images/Check_active@2x.png"></image>
     </view>
-</view>
+    <view class="classname" bindtap="select" data-way="sendByPost">
+      <text>邮寄</text>
+      <text style="font-size:20rpx;color:#FF623D">({{dte.operatorInfo.express_fee/100}}元快递费)</text>
 
-<view class="invoice_item" style="height:150rpx;margin-top:20rpx">
+      <image wx:if="{{!index4}}" src="../../images/check@2x.png"></image>
+      <image wx:if="{{index4}}" src="../../images/Check_active@2x.png"></image>
+    </view>
+  </view>
+</view>
+<view wx:if="{{index1}}">
+  <view class="invoice_item" style="height:150rpx;margin-top:20rpx">
     <view class="invoice_item_title">邮寄地址</view>
     <view style="width:70%">
-       <textarea style="height:130rpx;width:100%" placeholder-style="font-size:30rpx" placeholder="请填写备注如代订机票，代订房费等" />
+      <textarea style="height:130rpx;width:100%" placeholder-style="font-size:30rpx" placeholder="请填写备注如代订机票，代订房费等" />
     </view>
-</view>
+  </view>
 
 
-<view class="invoice_item">
-    <view class="invoice_item_title">联系人姓名</view>
+  <view class="invoice_item">
+    <view class="invoice_item_title">姓名</view>
     <view>
-        <input type="text" placeholder="请输入收件人姓名"/>
+      <input type="text" placeholder="请输入收件人姓名" />
     </view>
-</view>
+  </view>
 
 
 
-<view class="invoice_item">
-    <view class="invoice_item_title">联系人姓名</view>
+  <view class="invoice_item">
+    <view class="invoice_item_title">手机号</view>
     <view>
-        <input type="text" type="number" placeholder="请输入手机号"/>
+      <input type="text" type="number" placeholder="请输入手机号" />
     </view>
+  </view>
 </view>
-<button style="margin:20rpx 30rpx;background-color:#4D67EE;color:#fff">提交</button>
+
+
+<view class="invoice_item address" wx:if="{{index2}}" style="">
+  <view style="width:100%"> 公司地址：{{dte.operatorInfo.address}}</view>
+  <view style="width:100%">联系电话：{{dte.operatorInfo.tel}}</view>
+
+</view>
+
+
+
+
+
+
+
+<button bindtap="submit" style="margin:20rpx 30rpx;background-color:#4D67EE;color:#fff">提交</button>

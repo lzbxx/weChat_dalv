@@ -1,4 +1,5 @@
 // pages/financial/financial.js
+const Util = require("../../utils/util.js")
 Page({
 
   /**
@@ -15,13 +16,40 @@ Page({
           { img: "../../images/contract_application@2x.png", name: "合同申请", url:"contract_application"},
           { img: "../../images/contract_record@2x.png", name: "合同记录", url:"contract_record"}
     
-    ]
+    ],
+      agencyInfo:{
+          
+      }
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      var that = this;
+      var uid = wx.getStorageSync('Uid');
+      var token = wx.getStorageSync('sign_token');
+      wx.request({
+          url: 'http://dalvuapi.dalvu.com/index.php/Api/agencyFinance/index',
+          method: "POST",
+          header: {
+              "Content-Type": "application/x-www-form-urlencoded",
+          },
+          data: Util.json2Form({ uid: uid, sign_token: token}),
+          success: function (res) {
+              if (res.data.status == "00000") {
+                  that.setData({
+                      agencyInfo: res.data.agencyInfo
+                  })
+                  wx.setStorage({
+                      key: 'sign_token',
+                      data: res.data.sign_token,
+                  });
+                  console.log(res)
+              }
+          }
+      });
   
   },
 

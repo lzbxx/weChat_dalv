@@ -18,7 +18,8 @@
 
 }
 .title view{
-    flex: 1
+    flex: 1;
+ 
 }
 .title view:nth-last-child(1){
     text-align: right

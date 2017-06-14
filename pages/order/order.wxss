@@ -1,3 +1,9 @@
+page{
+    overflow: hidden
+}
+
+
+
 .swiper-tab{  
     width: 100%;  
     border-bottom: 2rpx solid #777777;  
@@ -17,6 +23,7 @@
     width: 215rpx;
     
 }  
+
 .on{ color: #4D67EE;  
     border-bottom: 5rpx solid #da7c0c;
     transform: scale(1.1);
@@ -39,7 +46,8 @@ view{
 .line_order{
     height: 300rpx;
     box-sizing: border-box;
-    padding: 20rpx 30rpx
+    padding: 20rpx 30rpx;
+    margin-top: 20rpx
 
 
 }
@@ -75,4 +83,7 @@ view{
 
     padding-bottom: 10rpx;
 
+}
+swiper-item{
+    overflow: scroll
 }

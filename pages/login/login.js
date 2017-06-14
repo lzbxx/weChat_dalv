@@ -45,6 +45,9 @@ Page({
 
     },
     login: function () {
+        wx.showLoading({
+            title: 'jjj',
+        })
         var that=this
      wx.request({
             url: 'http://dalvuapi.dalvu.com/index.php/Api/login/agencyIndex',
@@ -78,6 +81,7 @@ Page({
                     wx.navigateBack({
                         url:"../../pages/index/home"
                     });
+                  
 
                     
                 } else if (res.data.status == "00001"){
@@ -91,6 +95,7 @@ Page({
 
             }
         });
+        wx.hideLoading()
 
 
     }

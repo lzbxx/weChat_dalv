@@ -1,25 +1,36 @@
 <!--pages/financialson/recharge_record.wxml-->
 <text>pages/financialson/recharge_record.wxml</text>
-<view class="transaction_record_item">
+<view class="transaction_record_item" wx:for="{{list}}" wx:key="">
      <view class="title">
          <view>充值</view>
          <view>
-           <text>2017-08-22</text>
-           <text style="margin-left:20rpx">19:20:44</text>
+        
+           <text style="margin-left:20rpx">{{item.create_time}}</text>
          </view>
      </view>
       <view class="title detail">
          <view>状态</view>
          <view>
-           <text style="color:#5FC82B">审核通过</text>
+           <text   class="color{{item.state}}" >{{state[item.state]}}</text>
          
          </view>
+       
      </view>
- 
+
+       <view wx:if="{{item.memo}}" class="title detail lose" style="height:40rpx;background:#EEEEEE;  border-right: 30rpx solid #fff;border-left: 30rpx solid #fff;padding:0">
+         <view style="color:#FF8E77">失败原因</view>
+         <view>
+           <text   class="color{{item.state}}" >{{}}</text>
+         
+         </view>
+       
+     </view>
+     
+ <!--wx:if="{{item.memo}}"-->
      <view class="title detail">
          <view>充值金额</view>
          <view>
-           <text>￥-1999.00</text>
+           <text>￥{{item.amount/100}}</text>
          
          </view>
      </view>
@@ -27,14 +38,14 @@
      <view class="title detail" >
          <view>系统使用费</view>
          <view>
-           <text>0%</text>
+           <text>{{item.commission_rate/1000}}%</text>
       
          </view>
      </view>
     <view class="title detail" style=" border-bottom:1rpx solid #EDEDED;">
          <view>实际到账</view>
          <view>
-           <text>￥26666.00</text>
+           <text>￥{{item.actualPrice/100}}</text>
          
          </view>
      </view>

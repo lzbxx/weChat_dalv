@@ -1,9 +1,5 @@
 /* pages/financialson/invoice_application.wxss */
 @import "../../pages/financialson/contract_application.wxss";
-
-
-
-
 view{
     background: #fff;
     box-sizing: border-box;
@@ -31,4 +27,15 @@ view{
     transform: translateY(-50%);
     height: 40rpx;
     width:40rpx
+}
+.invoice_item input,textarea{
+    color:#494949;
+    font-size: 30rpx;
+}
+.address{
+    font-size: 30rpx;
+    height:160rpx;
+    padding:0 30rpx;
+    flex-wrap:wrap;
+    color: #707070
 }

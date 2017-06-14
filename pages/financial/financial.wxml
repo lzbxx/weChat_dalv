@@ -1,17 +1,17 @@
 <view class="financial_header">
     <view class="financial_money1">
-    4890.00
+    {{agencyInfo.account_balance/100}}
      <view class="financial_money2">账户总额</view>
     </view>
 </view>
 
 <view class="financial_means">
     <view>
-         <view >999.00</view>
+         <view >{{agencyInfo.freezeMoney/100}}</view>
          <view class="financial_money2">冻结金额</view>
     </view>
         <view style="border:none">
-            <view >1000.00</view>
+            <view >{{agencyInfo.availableBalance/100}}</view>
             <view  class="financial_money2">可用余额</view>
         </view> 
 </view>

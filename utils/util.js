@@ -2,7 +2,6 @@ function formatTime(date) {
     var year = date.getFullYear()
     var month = date.getMonth() + 1
     var day = date.getDate()
-
     var hour = date.getHours()
     var minute = date.getMinutes()
     var second = date.getSeconds()
@@ -57,11 +56,45 @@ function getStorage(key){
     })
     
 }
+// function list(){
+   
+//     var uid = wx.getStorageSync('Uid');
+//     var token = wx.getStorageSync('sign_token');
+//     var list =   wx.request({
+//         url: 'http://dalvuapi.dalvu.com/index.php/Api/agencyFinance/accountTransaction',
+//         method: "POST",
+//         header: {
+//             "Content-Type": "application/x-www-form-urlencoded",
+//         },
+//         data: json2Form({ uid: uid, sign_token: token, page: 1 }),
+//         success: function (res) {
+            
+//             if (res.data.status == "00000") {
+//               list = res.data.list
+//                 wx.setStorage({
+//                     key: 'sign_token',
+//                     data: res.data.sign_token,
+//                 }); 
+//                 return res.data.list
+
+//             }
+           
+            
+//         },
+        
+        
+        
+//     });
+//     console.log(list)
+
+   
+// }
 
 module.exports = {
     json2Form: json2Form,
     formatTime: formatTime,
     dinner:dinner,
     parseHtml: parseHtml,
-    getStorage: getStorage
+    getStorage: getStorage,
+ 
 }

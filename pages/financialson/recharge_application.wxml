@@ -1,186 +1,135 @@
-
-  <view class="swiper-tab" style="display:flex">
+<view class="swiper-tab" style="display:flex">
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">线下充值</view>
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">线上充值</view>
 
-  </view>
+</view>
 
-  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 50}}px" bindchange="bindChange">
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 50}}px" bindchange="bindChange">
 
     <swiper-item>
         <view class="body">
-        
-      
-        
+            <view class="main">
+                <view class="item" data-index="index" bindtap="select">
+                    <image src="../../images/cash@2x.png" style="height:48rpx;width:48rpx" />
+                    <view style="color:#494949;font-size:30rpx;padding-left:10rpx">现金充值</view>
+                    <view class="check">
+                        <image wx:if="{{!index}}" src="../../images/check@2x.png" />
+                        <image wx:if="{{index}}" src="../../images/Check_active@2x.png" />
+                    </view>
+                </view>
+                <view class="item" data-index="index1" bindtap="select">
+                    <image src="../../images/present_application@2x.png" style="height:48rpx;width:48rpx" />
+                    <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 刷卡充值</view>
+                    <view class="check">
+                        <image wx:if="{{!index1}}" src="../../images/check@2x.png" />
+                        <image wx:if="{{index1}}" src="../../images/Check_active@2x.png" />
+                    </view>
+                </view>
+                <view class="item" data-index="index2" bindtap="select">
+                    <image src="../../images/cheque.png" style="height:48rpx;width:48rpx" />
+                    <view style="color:#494949;font-size:30rpx;padding-left:10rpx">支票充值</view>
+                    <view class="check">
+                        <image wx:if="{{!index2}}" src="../../images/check@2x.png" />
+                        <image wx:if="{{index2}}" src="../../images/Check_active@2x.png" />
+                    </view>
+                </view>
+                <view class="item" data-index="index3" bindtap="select">
+                    <image src="../../images/bank@2x.png" style="height:48rpx;width:48rpx" />
+                    <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 银行转账</view>
+                    <view class="check">
+                        <image wx:if="{{!index3}}}" src="../../images/check@2x.png" />
+                        <image wx:if="{{index3}}" src="../../images/Check_active@2x.png" />
+                    </view>
+                </view>
+                <view wx:for="{{bankList}}" class="bank" wx:if="{{index3}}" wx:key="">
 
-      <view class="main">
-        <view class="item" data-index="index" bindtap="select">
-          <image src="../../images/cash@2x.png" style="height:48rpx;width:48rpx" />
-          <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 现金充值</view>
-          <view class="check">
-            <image wx:if="{{!index}}" src="../../images/check@2x.png" />
-            <image wx:if="{{index}}" src="../../images/Check_active@2x.png" />
-          </view>
 
+                    <view class="msg">
 
+                        {{item[0]}}
+                    </view>
+                    <view class="msg">
+
+                        {{item[1]}}
+                    </view>
+                    <view class="msg">
+
+                        {{item[2]}}
+                    </view>
+                </view>
+            </view>
+            <view class="classname" wx:if="{{index2|index3}}">
+                <view class="money_number">
+
+                    <view>汇款方</view>
+                    <view>
+                        <input value="{{payer}}"  bindblur="payer" placeholder="请输入汇款方名称" />
+                    </view>
+                </view>
+                <view class="money_number">
+                    <view>金额</view>
+                    <view>
+                        <input bindblur="money_number" value="{{money_number}}" type="number" placeholder="请输入充值的金额" />
+                    </view>
+
+                </view>
+            </view>
+            <view class="money_number" wx:if="{{index |index1}}">
+                <view>金额</view>
+                <view>
+                    <input bindblur="money_number" value="{{money_number}}" type="number" placeholder="请输入充值的金额" />
+                </view>
+            </view>
+            <view class="money_number" style="background:#F1F1F1">
+                <button bindtap="under_line">提交</button>
+            </view>
         </view>
-        <view class="item" data-index="index1" bindtap="select">
-          <image src="../../images/present_application@2x.png" style="height:48rpx;width:48rpx" />
-          <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 刷卡充值</view>
-          <view class="check">
-            <image wx:if="{{!index1}}" src="../../images/check@2x.png" />
-            <image wx:if="{{index1}}" src="../../images/Check_active@2x.png" />
-          </view>
-
-
-        </view>
-        <view class="item" data-index="index2" bindtap="select">
-          <image src="../../images/cheque.png" style="height:48rpx;width:48rpx" />
-          <view style="color:#494949;font-size:30rpx;padding-left:10rpx">支票充值</view>
-          <view class="check">
-            <image wx:if="{{!index2}}" src="../../images/check@2x.png" />
-            <image wx:if="{{index2}}" src="../../images/Check_active@2x.png" />
-          </view>
-
-
-        </view>
-        <view class="item" data-index="index3" bindtap="select">
-          <image src="../../images/bank@2x.png" style="height:48rpx;width:48rpx" />
-          <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 银行转账</view>
-          <view class="check">
-            <image wx:if="{{!index3}}}" src="../../images/check@2x.png" />
-            <image wx:if="{{index3}}" src="../../images/Check_active@2x.png" />
-          </view>
-        </view>
-
-        <view class="bank" wx:if="{{index3}}">
-          <view class="msg">
-            <text>开户名</text>
-            北京大旅科技有限公司
-          </view>
-          <view class="msg">
-            <text>账号</text>
-            00000889070859607 8907890789079-7-0
-          </view>
-          <view class="msg">
-            <text>开户行</text>
-            工商银行北京日坛路支行
-          </view>
-
-        </view>
-   
-   
-
-      </view>
-
-      <view class="classname" wx:if="{{index2|index3}}">
-        <view class="money_number">
-
-          <view>汇款方</view>
-          <view>
-            <input placeholder="请输入汇款方名称" />
-          </view>
-
-
-        </view>
-
-
-
-        <view class="money_number">
-
-          <view>金额</view>
-          <view>
-            <input placeholder="请输入充值的金额" />
-          </view>
-
-
-        </view>
-
-      </view>
-
-      <view class="money_number" wx:if="{{index |index1}}">
-
-        <view>金额</view>
-        <view>
-          <input placeholder="请输入充值的金额" />
-        </view>
-
-
-      </view>
-
-
-
-
-      <view class="money_number" style="background:#F1F1F1">
-
-        <button>提交</button>
-
-
-      </view>
-
-
-
-
-
-</view>
-
-
     </swiper-item>
-
-
-
-
     <swiper-item>
 
-     <view class="body">
-      <view class="main">
-        <view class="item" data-index="index4" bindtap="select">
-          <image src="../../images/cash@2x.png" style="height:48rpx;width:48rpx" />
-          <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 微信充值</view>
-          <view class="check">
-            <image wx:if="{{!index4}}" src="../../images/check@2x.png" />
-            <image wx:if="{{index4}}" src="../../images/Check_active@2x.png" />
-          </view>
+        <view class="body">
+            <view class="main">
+                <view class="item" data-index="index4" bindtap="select">
+                    <image src="../../images/WeChat@2x.png" style="height:48rpx;width:48rpx" />
+                    <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 微信充值</view>
+                    <view class="check">
+                        <image wx:if="{{!index4}}" src="../../images/check@2x.png" />
+                        <image wx:if="{{index4}}" src="../../images/Check_active@2x.png" />
+                    </view>
+
+                </view>
+                <view class="item" data-index="index5" bindtap="select">
+                    <image src="../../images/Alipay@2x.png" style="height:48rpx;width:48rpx" />
+                    <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 支付宝充值</view>
+                    <view class="check">
+                        <image wx:if="{{!index5}}" src="../../images/check@2x.png" />
+                        <image wx:if="{{index5}}" src="../../images/Check_active@2x.png" />
+                    </view>
+
+                </view>
+            </view>
+            <view class="money_number" wx:if="{{index4 |index5}}">
+
+                <view>金额</view>
+                <view>
+                    <input bindblur="money_number" type="number" placeholder="请输入充值的金额" />
+                </view>
+            </view>
+            <view class="money_number" wx:if="{{index4 |index5}}" style="background:#F1F1F1">
+
+                <button>提交</button>
+
+            </view>
+
+
+
+
+
+
 
 
         </view>
-        <view class="item" data-index="index5" bindtap="select">
-          <image src="../../images/present_application@2x.png" style="height:48rpx;width:48rpx" />
-          <view style="color:#494949;font-size:30rpx;padding-left:10rpx"> 支付宝充值</view>
-          <view class="check">
-            <image wx:if="{{!index5}}" src="../../images/check@2x.png" />
-            <image wx:if="{{index5}}" src="../../images/Check_active@2x.png" />
-          </view>
-
-        </view>
-      </view>
-      <view class="money_number" wx:if="{{index4 |index5}}">
-
-        <view>金额</view>
-        <view>
-          <input placeholder="请输入充值的金额" />
-        </view>
-
-
-      </view>
-      <view class="money_number" wx:if="{{index4 |index5}}" style="background:#F1F1F1">
-
-        <button>提交</button>
-
-
-      </view>
-
-
-
-
-
-
-
-
-</view>
 
     </swiper-item>
 
-  </swiper>
-
-
+</swiper>
